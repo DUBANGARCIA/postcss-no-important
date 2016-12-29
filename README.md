@@ -18,7 +18,7 @@
 .foo {
   /* Output example */
   
-  background-color: #ccc !important;
+  background-color: #ccc;
 }
 ```
 
