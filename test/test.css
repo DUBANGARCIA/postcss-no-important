@@ -1,0 +1,46 @@
+body{
+    background-color: #222222 !important;
+}
+
+.class{
+    display: block !important;
+}
+
+#item{
+    font: 500 20px 'Helvetica' !important;
+    animation: iniciar 2s infinite;
+}
+
+@keyframes iniciar {
+    from{
+        flex: auto !important;
+    }
+
+    to{
+        flex: 2 !important;
+    }
+}
+
+@media screen {
+    h1{
+        box-shadow: 2px 2px 5px 4px antiquewhite !important;
+    }
+}
+
+@media (min-width: 200px){
+    nav:after, nav:before{
+        clear: both;
+    }
+}
+
+@media (max-width: 500px){
+    section{
+        background-color: #fff !important;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 500px){
+    section{
+        width: 90% !important;
+    }
+}
