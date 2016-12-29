@@ -20,4 +20,4 @@ it('does something', () => {
 
 it('delete !important', function(){
     return run('a{background: #ffffff !important;}', 'a{background: #ffffff;}', {})
-})
+});
