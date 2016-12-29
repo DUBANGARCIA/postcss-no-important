@@ -9,12 +9,16 @@
 ```css
 .foo {
     /* Input example */
+    
+    background-color: #ccc !important;
 }
 ```
 
 ```css
 .foo {
   /* Output example */
+  
+  background-color: #ccc !important;
 }
 ```
 

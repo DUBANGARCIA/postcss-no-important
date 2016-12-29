@@ -1,15 +1,12 @@
 var postcss = require('postcss');
 
-module.exports = postcss.plugin('postcss-no-important', function (opts) {
-    opts = opts || {};
-
-    // Work with options here
+module.exports = postcss.plugin('postcss-no-important', function () {
 
     return function (root) {
 
         // Transform CSS AST here
 
-        root.walkDecls(function(decl) {
+        root.walkDecls( function ( decl ) {
             // Transform each property declaration here
 
             var value = decl.important;
@@ -19,7 +16,7 @@ module.exports = postcss.plugin('postcss-no-important', function (opts) {
                 decl.important = false;
             }
 
-        });
+        } );
 
     };
-});
+} );
