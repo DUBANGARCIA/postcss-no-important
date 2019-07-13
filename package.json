@@ -19,8 +19,8 @@
     "postcss": "^7.0.17"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.4.5",
-    "babel-core": "^6.21.0",
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
     "jest": "^24.8.0"
