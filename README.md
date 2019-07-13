@@ -1,4 +1,5 @@
-# PostCSS No Important [![Build Status][ci-img]][ci]
+# PostCSS No Important 
+[![Build Status][ci-img]][ci] [![Known Vulnerabilities](https://snyk.io//test/github/DUBANGARCIA/postcss-no-important/badge.svg?targetFile=package.json)](https://snyk.io//test/github/DUBANGARCIA/postcss-no-important?targetFile=package.json)
 
 [PostCSS] plugin for delete declarations !important.
 
