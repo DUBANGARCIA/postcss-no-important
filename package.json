@@ -1,6 +1,6 @@
 {
   "name": "postcss-no-important",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "PostCSS plugin for delete declarations !important",
   "keywords": [
     "postcss",
@@ -8,24 +8,26 @@
     "postcss-plugin",
     "important"
   ],
-  "author": "Duban Garcia <duban162008@hotmail.com>",
-  "license": "MIT",
-  "repository": "DUBANGARCIA/postcss-no-important",
+  "homepage": "https://github.com/DUBANGARCIA/postcss-no-important",
   "bugs": {
     "url": "https://github.com/DUBANGARCIA/postcss-no-important/issues"
   },
-  "homepage": "https://github.com/DUBANGARCIA/postcss-no-important",
+  "repository": "DUBANGARCIA/postcss-no-important",
+  "license": "MIT",
+  "author": "Duban Garcia <duban162008@hotmail.com>",
+  "scripts": {
+    "postinstall": "yarn sort-package-json",
+    "test": "yarn jest"
+  },
   "dependencies": {
-    "postcss": "^7.0.17"
+    "postcss": "^7.0.27"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.4",
-    "@babel/preset-env": "^7.5.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
-    "jest": "^24.8.0"
-  },
-  "scripts": {
-    "test": "jest"
+    "jest": "^25.2.7",
+    "sort-package-json": "^1.40.0"
   }
 }
