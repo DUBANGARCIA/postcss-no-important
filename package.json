@@ -1,6 +1,6 @@
 {
   "name": "postcss-no-important",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "description": "PostCSS plugin for delete declarations !important",
   "keywords": [
     "postcss",
@@ -16,8 +16,8 @@
   "license": "MIT",
   "author": "Duban Garcia <duban162008@hotmail.com>",
   "scripts": {
-    "postinstall": "node --max-old-space-size=4096 --no-wasm-code-gc ./node_modules/.bin/sort-package-json",
-    "test": "node --max-old-space-size=4096 --no-wasm-code-gc ./node_modules/.bin/jest"
+    "postinstall": "sort-package-json",
+    "test": "jest"
   },
   "dependencies": {
     "postcss": "^7.0.28"
