@@ -1,38 +1,38 @@
 {
-  "name":            "postcss-no-important",
-  "version":         "4.1.0",
-  "description":     "PostCSS plugin for delete declarations !important",
-  "keywords":        [
+  "name": "postcss-no-important",
+  "version": "4.1.0",
+  "description": "PostCSS plugin for delete declarations !important",
+  "keywords": [
     "postcss",
     "css",
     "postcss-plugin",
     "important"
   ],
-  "homepage":        "https://github.com/DUBANGARCIA/postcss-no-important",
-  "bugs":            {
+  "homepage": "https://github.com/DUBANGARCIA/postcss-no-important",
+  "bugs": {
     "url": "https://github.com/DUBANGARCIA/postcss-no-important/issues"
   },
-  "repository":      "DUBANGARCIA/postcss-no-important",
-  "license":         "MIT",
-  "author":          "Duban Garcia <duban162008@hotmail.com>",
-  "scripts":         {
+  "repository": "DUBANGARCIA/postcss-no-important",
+  "license": "MIT",
+  "author": "Duban Garcia <duban162008@hotmail.com>",
+  "scripts": {
     "postinstall": "npx sort-package-json",
-    "test":        "yarn jest"
+    "test": "yarn jest"
   },
-  "resolutions":     {
-    "**/**/kind-of":      "^6.0.3",
-    "**/**/minimist":     "^1.2.5",
-    "**/**/set-value":    "^3.0.2",
+  "resolutions": {
+    "**/**/kind-of": "^6.0.3",
+    "**/**/minimist": "^1.2.5",
+    "**/**/set-value": "^3.0.2",
     "**/**/yargs-parser": "^18.1.3"
   },
-  "dependencies":    {
+  "dependencies": {
     "postcss": "^8.2.13"
   },
   "devDependencies": {
-    "@babel/core":       "^7.9.6",
+    "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
-    "gulp":              "^4.0.2",
-    "gulp-postcss":      "^8.0.0",
-    "jest":              "^26.0.1"
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "jest": "^26.0.1"
   }
 }
