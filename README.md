@@ -1,5 +1,7 @@
 # PostCSS No Important 
 [![Build Status][ci-img]][ci] [![Known Vulnerabilities](https://snyk.io//test/github/DUBANGARCIA/postcss-no-important/badge.svg?targetFile=package.json)](https://snyk.io//test/github/DUBANGARCIA/postcss-no-important?targetFile=package.json)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 
 [PostCSS] plugin for delete declarations !important.
 
@@ -21,6 +23,12 @@
   
   background-color: #ccc;
 }
+```
+
+## Installation
+
+```bash
+yarn add --dev postcss postcss-no-important
 ```
 
 ## Usage
