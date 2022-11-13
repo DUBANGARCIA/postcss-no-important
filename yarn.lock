@@ -1868,7 +1868,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@iarna/toml@npm:2.2.5":
+"@iarna/toml@npm:2.2.5, @iarna/toml@npm:^2.2.5":
   version: 2.2.5
   resolution: "@iarna/toml@npm:2.2.5"
   checksum: b63b2b2c4fd67969a6291543ada0303d45593801ee744b60f5390f183c03d9192bc67a217abb24be945158f1935f02840d9ffff40c0142aa171b5d3b6b6a3ea5
@@ -2423,6 +2423,25 @@ __metadata:
     "@pnpm/network.ca-file": ^1.0.1
     config-chain: ^1.1.11
   checksum: 0c5f1a63782309a877b70e3cbdd21ff1da57549924a941772bafd0117323881fdcda0e9753f0a695c3f85f4360f5ca27a0e20153abae6985350502f2d94b7d40
+  languageName: node
+  linkType: hard
+
+"@release-it/bumper@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@release-it/bumper@npm:4.0.0"
+  dependencies:
+    "@iarna/toml": ^2.2.5
+    detect-indent: ^7.0.0
+    fast-glob: ^3.2.7
+    ini: ^3.0.0
+    js-yaml: ^4.1.0
+    lodash.castarray: ^4.4.0
+    lodash.get: ^4.4.2
+    lodash.set: ^4.3.2
+    semver: ^7.3.7
+  peerDependencies:
+    release-it: ^15.0.0-esm.4
+  checksum: eea70127cb79eac5a0333479b09687bdd9dbfc0e1b336a516fafcbb437ab889001fde8aa4988244ebcd22e9f2714679a1e5ea530e8a27c78b1ec390cff0dc8c2
   languageName: node
   linkType: hard
 
@@ -4582,7 +4601,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"detect-indent@npm:^7.0.1":
+"detect-indent@npm:^7.0.0, detect-indent@npm:^7.0.1":
   version: 7.0.1
   resolution: "detect-indent@npm:7.0.1"
   checksum: cbf3f0b1c3c881934ca94428e1179b26ab2a587e0d719031d37a67fb506d49d067de54ff057cb1e772e75975fed5155c01cd4518306fee60988b1486e3fc7768
@@ -5392,7 +5411,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.9":
+"fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.7, fast-glob@npm:^3.2.9":
   version: 3.2.12
   resolution: "fast-glob@npm:3.2.12"
   dependencies:
@@ -6539,6 +6558,13 @@ __metadata:
   version: 1.3.7
   resolution: "ini@npm:1.3.7"
   checksum: f8f3801e8eb039f9e03cdc27ceb494a7ac6e6ca7b2dd8394a9ef97ed5ae66930fadefd5ec908e41e4b103d3c9063b5788d47de5e8e892083c7a67b489f3b962d
+  languageName: node
+  linkType: hard
+
+"ini@npm:^3.0.0":
+  version: 3.0.1
+  resolution: "ini@npm:3.0.1"
+  checksum: 947b582a822f06df3c22c75c90aec217d604ea11f7a20249530ee5c1cf8f508288439abe17b0e1d9b421bda5f4fae5e7aae0b18cb3ded5ac9d68f607df82f10f
   languageName: node
   linkType: hard
 
@@ -7932,10 +7958,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.castarray@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "lodash.castarray@npm:4.4.0"
+  checksum: fca8c7047e0ae2738b0b2503fb00157ae0ff6d8a1b716f87ed715b22560e09de438c75b65e01a7e44ceb41c5b31dce2eb576e46db04beb9c699c498e03cbd00f
+  languageName: node
+  linkType: hard
+
 "lodash.debounce@npm:^4.0.8":
   version: 4.0.8
   resolution: "lodash.debounce@npm:4.0.8"
   checksum: a3f527d22c548f43ae31c861ada88b2637eb48ac6aa3eb56e82d44917971b8aa96fbb37aa60efea674dc4ee8c42074f90f7b1f772e9db375435f6c83a19b3bc6
+  languageName: node
+  linkType: hard
+
+"lodash.get@npm:^4.4.2":
+  version: 4.4.2
+  resolution: "lodash.get@npm:4.4.2"
+  checksum: e403047ddb03181c9d0e92df9556570e2b67e0f0a930fcbbbd779370972368f5568e914f913e93f3b08f6d492abc71e14d4e9b7a18916c31fa04bd2306efe545
   languageName: node
   linkType: hard
 
@@ -7957,6 +7997,13 @@ __metadata:
   version: 4.6.2
   resolution: "lodash.merge@npm:4.6.2"
   checksum: ad580b4bdbb7ca1f7abf7e1bce63a9a0b98e370cf40194b03380a46b4ed799c9573029599caebc1b14e3f24b111aef72b96674a56cfa105e0f5ac70546cdc005
+  languageName: node
+  linkType: hard
+
+"lodash.set@npm:^4.3.2":
+  version: 4.3.2
+  resolution: "lodash.set@npm:4.3.2"
+  checksum: a9122f49eef9f2d0fc9061a33d87f8e5b8c6b23d46e8b9e9ce1529d3588d79741bd1145a3abdfa3b13082703e65af27ff18d8a07bfc22b9be32f3fc36f763f70
   languageName: node
   linkType: hard
 
@@ -9256,6 +9303,7 @@ __metadata:
     "@babel/preset-env": ^7.20.2
     "@commitlint/cli": ^17.2.0
     "@commitlint/config-conventional": ^17.2.0
+    "@release-it/bumper": ^4.0.0
     "@release-it/conventional-changelog": ^5.1.1
     clean-publish: ^4.0.1
     commitizen: ^4.2.5

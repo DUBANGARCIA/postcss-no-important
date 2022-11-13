@@ -25,6 +25,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
@@ -33,7 +36,8 @@ jobs:
       - uses: borales/actions-yarn@v3.0.0
         with:
           cmd: install # will run `yarn install` command
-      - uses: borales/actions-yarn@v3.0.0
+      - name: release-it
+        uses: TheRealWaldo/release-it@v0.7.2
         with:
-          auth-token: ${{ secrets.PUBLISH_PACKAGES }}
-          cmd: run release
+          github-token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+          json-opts: '{"dry-run": true}'
