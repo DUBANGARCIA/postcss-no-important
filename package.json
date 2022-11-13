@@ -21,7 +21,7 @@
 		"postinstall": "yarn sort-package-json",
 		"lint": "yarn eslint",
 		"prepare": "yarn is-ci || yarn husky install",
-		"release": "export GITHUB_TOKEN=\"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\" yarn release-it --ci",
+		"release": "yarn release-it --ci",
 		"test": "yarn jest"
 	},
 	"config": {

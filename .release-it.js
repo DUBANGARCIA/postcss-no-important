@@ -16,6 +16,7 @@ module.exports = {
     release: true,
     // eslint-disable-next-line no-template-curly-in-string
     releaseName: 'Release ${version}',
+    tokenRef: 'PERSONAL_GITHUB_TOKEN'
   },
   npm: {
     publish: true,
