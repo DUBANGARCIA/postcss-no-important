@@ -23,5 +23,16 @@ jobs:
     needs: build
     if: github.ref == 'refs/heads/master'
     steps:
-      - name: Deploy app
-        run: yarn run release
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.x'
+          cache: 'yarn'
+      - uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: install # will run `yarn install` command
+      - uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: run release
