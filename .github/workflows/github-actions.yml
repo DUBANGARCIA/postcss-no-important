@@ -35,4 +35,5 @@ jobs:
           cmd: install # will run `yarn install` command
       - uses: borales/actions-yarn@v3.0.0
         with:
+          auth-token: ${{ secrets.PUBLISH_PACKAGES }}
           cmd: run release
