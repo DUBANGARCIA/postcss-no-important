@@ -1,6 +1,11 @@
 name: Build
 run-name: ${{ github.actor }}
-on: [push]
+on:
+  pull_request:
+  push:
+    branches:
+      - '*'
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,7 +29,7 @@ jobs:
     needs: build
     on:
       push:
-        # Pattern matched against refs/tags
+        # Sequence of patterns matched against refs/heads
         branches:
           - 'master'
     steps:
