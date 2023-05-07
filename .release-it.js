@@ -1,6 +1,6 @@
 module.exports = {
   hooks: {
-    'before:npm': "yarn clean-publish --fields 'scripts'",
+    'after:@release-it/conventional-changelog:bump': "yarn clean-publish --fields 'scripts'",
     'after:npm': 'rm -rf ./dist > /dev/null',
   },
   git: {
