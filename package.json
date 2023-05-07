@@ -16,23 +16,6 @@
 	"license": "MIT",
 	"author": "Duban Garcia <duban162008@hotmail.com>",
 	"main": "src/index.js",
-	"publishConfig": {
-		"directory": "dist"
-	},
-	"clean-publish": {
-		"withoutPublish": true,
-		"tempDir": "dist",
-		"packageManager": "yarn",
-		"files": [
-			".yarn",
-			".idea",
-			".husky",
-			".huskyrc.js",
-			".yarnrc.yml",
-			"dependabot.yml",
-			"lint-staged.config.js"
-		]
-	},
 	"scripts": {
 		"commit": "yarn git-cz",
 		"postinstall": "yarn sort-package-json",
@@ -84,5 +67,22 @@
 	"peerDependencies": {
 		"postcss": "^8.4.19"
 	},
-	"packageManager": "yarn@3.2.4"
+	"packageManager": "yarn@3.2.4",
+	"publishConfig": {
+		"directory": "dist"
+	},
+	"clean-publish": {
+		"withoutPublish": true,
+		"tempDir": "dist",
+		"packageManager": "yarn",
+		"files": [
+			".yarn",
+			".idea",
+			".husky",
+			".huskyrc.js",
+			".yarnrc.yml",
+			"dependabot.yml",
+			"lint-staged.config.js"
+		]
+	}
 }
