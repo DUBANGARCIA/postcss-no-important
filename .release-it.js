@@ -1,4 +1,8 @@
 module.exports = {
+  hooks: {
+    'before:npm': "yarn clean-publish --fields 'scripts'",
+    'after:npm': 'rm -rf ./dist > /dev/null',
+  },
   git: {
     // eslint-disable-next-line no-template-curly-in-string
     requireCleanWorkingDir: true,
@@ -16,7 +20,7 @@ module.exports = {
     tokenRef: 'GITHUB_TOKEN',
   },
   npm: {
-    publish: true,
+    publish: false,
     publishPath: './dist',
   },
   publishConfig: {

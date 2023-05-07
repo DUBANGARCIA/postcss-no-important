@@ -21,12 +21,10 @@
 	},
 	"clean-publish": {
 		"withoutPublish": true,
-		"tempDir": "dist",
+		"tempDir": "./dist",
 		"packageManager": "yarn"
 	},
 	"scripts": {
-		"prepublishOnly": "rm -rf ./dist > /dev/null && yarn clean-publish --fields 'scripts'",
-		"postpublish": "rm -rf ./dist > /dev/null",
 		"commit": "yarn git-cz",
 		"postinstall": "yarn sort-package-json",
 		"lint": "yarn eslint",
