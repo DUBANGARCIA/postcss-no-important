@@ -332,7 +332,6 @@ module.exports = {
     'init-declarations': 'off',
     'jsdoc/check-alignment': 'error',
     'jsdoc/check-indentation': 'error',
-    'jsdoc/newline-after-description': 'error',
     'jsdoc/no-types': 'off',
     'jsx-quotes': ['off', 'prefer-double'],
     'key-spacing': [
@@ -385,9 +384,7 @@ module.exports = {
     ],
     'max-classes-per-file': ['error', 1],
     'max-depth': ['off', 4],
-    'max-len': [
-      'error',
-    ],
+    'max-len': ['error'],
     'max-lines': ['error', 400],
     'max-lines-per-function': [
       'off',

@@ -295,3 +295,4 @@ tmp
 .verdaccio/*
 !.verdaccio/config.yml
 !.verdaccio/htpasswd
+.eslintrc.js
