@@ -21,6 +21,9 @@ module.exports = {
   npm: {
     publish: true,
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   plugins: {
     '@release-it/conventional-changelog': {
       preset: 'angular',
