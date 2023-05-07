@@ -1,3 +1,9 @@
+## [10.0.7](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.0.6...10.0.7) (2023-05-07)
+
+### Bug Fixes
+
+- **workspace:** 🐛 the resolution of dependencies ([ae00d7b](https://github.com/DUBANGARCIA/postcss-no-important/commit/ae00d7b62a0779be37950f745165ca4b7d84bcdb))
+
 ## [10.0.6](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.0.5...10.0.6) (2023-05-07)
 
 ## [10.0.5](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.0.4...10.0.5) (2023-05-07)
