@@ -21,6 +21,7 @@
 		"postinstall": "yarn sort-package-json",
 		"lint": "yarn eslint",
 		"prepare": "yarn is-ci || yarn husky install",
+		"publish": "yarn clean-publish",
 		"release": "yarn release-it --ci",
 		"test": "yarn jest"
 	},

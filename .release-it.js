@@ -1,7 +1,4 @@
 module.exports = {
-  hooks: {
-    'before:init': ['yarn clear-package-json ./package.json -o ./package.json --fields scripts'],
-  },
   git: {
     // eslint-disable-next-line no-template-curly-in-string
     requireCleanWorkingDir: false,
@@ -22,8 +19,8 @@ module.exports = {
   npm: {
     publish: true,
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+  publishConfig: {
+    registry: "https://registry.npmjs.org"
   },
   plugins: {
     '@release-it/conventional-changelog': {
