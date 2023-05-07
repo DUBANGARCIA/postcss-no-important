@@ -1,3 +1,5 @@
+## [10.0.4](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.0.3...10.0.4) (2023-05-07)
+
 ## [10.0.3](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.0.2...10.0.3) (2023-05-07)
 
 ## [10.0.2](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.0.1...10.0.2) (2023-05-07)
