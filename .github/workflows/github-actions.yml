@@ -38,9 +38,6 @@ jobs:
       - uses: borales/actions-yarn@v4
         with:
           cmd: install # will run `yarn install` command
-      - name: release-it
-        uses: TheRealWaldo/release-it@v0.7.2
+      - uses: borales/actions-yarn@v4
         with:
-          github-token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
-          json-opts: '{"dry-run": true}'
-          debug: true
+          cmd: release # will run `yarn install` command
