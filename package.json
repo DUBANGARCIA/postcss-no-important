@@ -20,14 +20,13 @@
 		"directory": "dist"
 	},
 	"clean-publish": {
-		"beforeScript": "rm -rf ./dist",
 		"withoutPublish": true,
 		"tempDir": "dist",
 		"packageManager": "yarn"
 	},
 	"scripts": {
-		"prepublishOnly": "rm -rf ./dist && yarn clean-publish",
-		"postpublish": "rm -rf ./dist",
+		"prepublishOnly": "rm -rf ./dist > /dev/null && yarn clean-publish --fields 'scripts'",
+		"postpublish": "rm -rf ./dist > /dev/null",
 		"commit": "yarn git-cz",
 		"postinstall": "yarn sort-package-json",
 		"lint": "yarn eslint",
