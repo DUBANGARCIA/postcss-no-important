@@ -4,6 +4,7 @@ module.exports = {
   },
   git: {
     // eslint-disable-next-line no-template-curly-in-string
+    requireCleanWorkingDir: false,
     commitMessage: 'chore(workspace): 🤖 release ${version}',
     requireCommits: true,
     // eslint-disable-next-line no-template-curly-in-string
