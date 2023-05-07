@@ -16,12 +16,22 @@
 	"license": "MIT",
 	"author": "Duban Garcia <duban162008@hotmail.com>",
 	"main": "src/index.js",
+	"publishConfig": {
+		"directory": "dist"
+	},
+	"clean-publish": {
+		"beforeScript": "rm -rf ./dist",
+		"withoutPublish": true,
+		"tempDir": "dist",
+		"packageManager": "yarn"
+	},
 	"scripts": {
+		"prepublishOnly": "rm -rf ./dist && yarn clean-publish",
+		"postpublish": "rm -rf ./dist",
 		"commit": "yarn git-cz",
 		"postinstall": "yarn sort-package-json",
 		"lint": "yarn eslint",
 		"prepare": "yarn is-ci || yarn husky install",
-		"publish": "yarn clean-publish",
 		"release": "yarn release-it --ci",
 		"test": "yarn jest"
 	},
