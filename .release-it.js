@@ -20,7 +20,7 @@ module.exports = {
     tokenRef: 'GITHUB_TOKEN',
   },
   npm: {
-    publish: false,
+    publish: true,
     publishPath: './dist',
   },
   publishConfig: {
