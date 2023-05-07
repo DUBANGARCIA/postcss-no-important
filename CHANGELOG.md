@@ -1,3 +1,9 @@
+## [10.0.2](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.0.1...10.0.2) (2023-05-07)
+
+### Bug Fixes
+
+- **workspace:** 🐛 adding configuration in release it hooks ([73d7c45](https://github.com/DUBANGARCIA/postcss-no-important/commit/73d7c455303be948257b38d095cecda33bc78551))
+
 ## [10.0.1](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.0.0...10.0.1) (2023-05-07)
 
 # [10.0.0](https://github.com/DUBANGARCIA/postcss-no-important/compare/v1.0.0...10.0.0) (2023-05-07)
