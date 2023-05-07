@@ -17,6 +17,7 @@ module.exports = {
   },
   npm: {
     publish: true,
+    publishPath: './dist',
   },
   publishConfig: {
     registry: 'https://registry.npmjs.org',
