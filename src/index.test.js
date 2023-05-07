@@ -9,6 +9,6 @@ async function run(input, output, options) {
 
 describe('main', () => {
   test('delete !important', async () => {
-    await run('a{background: #ffffff !important;}', 'a{background: #ffffff;}', {})
+    await run('a{background: #ffffff !important;}', 'a{background: #ffffff;}', {});
   });
 });
