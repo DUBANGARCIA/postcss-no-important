@@ -1,7 +1,7 @@
 module.exports = {
   git: {
     // eslint-disable-next-line no-template-curly-in-string
-    requireCleanWorkingDir: false,
+    requireCleanWorkingDir: true,
     commitMessage: 'chore(workspace): 🤖 release ${version}',
     requireCommits: true,
     // eslint-disable-next-line no-template-curly-in-string
@@ -14,7 +14,7 @@ module.exports = {
     release: true,
     // eslint-disable-next-line no-template-curly-in-string
     releaseName: 'Release ${version}',
-    tokenRef: 'PERSONAL_GITHUB_TOKEN'
+    tokenRef: 'GITHUB_TOKEN'
   },
   npm: {
     publish: true,
