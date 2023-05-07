@@ -49,6 +49,6 @@ jobs:
       - uses: borales/actions-yarn@v4
         with:
           cmd: release # will run `yarn install` command
-          env:
-            GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
-            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
