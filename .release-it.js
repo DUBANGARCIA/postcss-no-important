@@ -8,6 +8,7 @@ module.exports = {
     tagName: '${version}',
     tag: true,
     push: true,
+    pushRepo: 'git://github.com/DUBANGARCIA/postcss-no-important.git',
   },
   github: {
     release: true,
