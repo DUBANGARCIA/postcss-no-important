@@ -20,7 +20,7 @@
 		"directory": "dist"
 	},
 	"clean-publish": {
-		"withoutPublish": true,
+		"withoutPublish": false,
 		"tempDir": "./dist",
 		"packageManager": "yarn"
 	},
