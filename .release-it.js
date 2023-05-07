@@ -8,19 +8,18 @@ module.exports = {
     tagName: '${version}',
     tag: true,
     push: true,
-    requireUpstream: false,
   },
   github: {
     release: true,
     // eslint-disable-next-line no-template-curly-in-string
     releaseName: 'Release ${version}',
-    tokenRef: 'GITHUB_TOKEN'
+    tokenRef: 'GITHUB_TOKEN',
   },
   npm: {
     publish: true,
   },
   publishConfig: {
-    registry: "https://registry.npmjs.org"
+    registry: 'https://registry.npmjs.org',
   },
   plugins: {
     '@release-it/conventional-changelog': {
