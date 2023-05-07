@@ -1,7 +1,7 @@
 module.exports = {
   hooks: {
     'after:@release-it/conventional-changelog:bump': "yarn clean-publish --fields 'scripts'",
-    'after:npm': 'rm -rf ./dist > /dev/null',
+    'after:release': 'rm -rf ./dist > /dev/null',
   },
   git: {
     // eslint-disable-next-line no-template-curly-in-string

@@ -22,7 +22,16 @@
 	"clean-publish": {
 		"withoutPublish": true,
 		"tempDir": "dist",
-		"packageManager": "yarn"
+		"packageManager": "yarn",
+		"files": [
+			".yarn",
+			".idea",
+			".husky",
+			".huskyrc.js",
+			".yarnrc.yml",
+			"dependabot.yml",
+			"lint-staged.config.js"
+		]
 	},
 	"scripts": {
 		"commit": "yarn git-cz",
