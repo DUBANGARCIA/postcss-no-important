@@ -1,6 +1,6 @@
 {
 	"name": "postcss-no-important",
-	"version": "9.0.0",
+	"version": "10.0.0",
 	"description": "PostCSS plugin for delete declarations !important",
 	"keywords": [
 		"postcss",
