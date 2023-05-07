@@ -1,3 +1,5 @@
+## [10.0.1](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.0.0...10.0.1) (2023-05-07)
+
 # [10.0.0](https://github.com/DUBANGARCIA/postcss-no-important/compare/v1.0.0...10.0.0) (2023-05-07)
 
 ### Bug Fixes
