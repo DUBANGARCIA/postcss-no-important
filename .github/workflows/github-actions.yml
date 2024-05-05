@@ -13,10 +13,10 @@ jobs:
             node-version-file: '.nvmrc'
             check-latest: true
             cache: 'yarn'
-        - uses: borales/actions-yarn@v4
+        - uses: borales/actions-yarn@v5
           with:
             cmd: install # will run `yarn install` command
-        - uses: borales/actions-yarn@v4
+        - uses: borales/actions-yarn@v5
           with:
             cmd: test # will run `yarn test` command
 #  deploy:
@@ -43,10 +43,10 @@ jobs:
 #          node-version-file: '.nvmrc'
 #          check-latest: true
 #          cache: 'yarn'
-#      - uses: borales/actions-yarn@v4
+#      - uses: borales/actions-yarn@v5
 #        with:
 #          cmd: install # will run `yarn install` command
-#      - uses: borales/actions-yarn@v4
+#      - uses: borales/actions-yarn@v5
 #        with:
 #          cmd: release # will run `yarn install` command
 #        env:
