@@ -1,7 +1,6 @@
 # Common settings that generally should always be used with your language specific settings
 
 # Auto detect text files and perform LF normalization
-# https://www.davidlaing.com/2012/09/19/customise-your-gitattributes-to-become-a-git-ninja/
 *          text=auto eol=lf
 
 #
@@ -10,26 +9,28 @@
 
 # Documents
 *.bibtex   text diff=bibtex
-*.doc	        diff=astextplain
-*.DOC	        diff=astextplain
-*.docx          diff=astextplain
-*.DOCX          diff=astextplain
-*.dot           diff=astextplain
-*.DOT           diff=astextplain
-*.pdf           diff=astextplain
-*.PDF           diff=astextplain
-*.rtf           diff=astextplain
-*.RTF	        diff=astextplain
-*.md       text
+*.doc      diff=astextplain
+*.DOC      diff=astextplain
+*.docx     diff=astextplain
+*.DOCX     diff=astextplain
+*.dot      diff=astextplain
+*.DOT      diff=astextplain
+*.pdf      diff=astextplain
+*.PDF      diff=astextplain
+*.rtf      diff=astextplain
+*.RTF      diff=astextplain
+*.md       text diff=markdown
+*.mdx      text diff=markdown
 *.tex      text diff=tex
 *.adoc     text
 *.textile  text
 *.mustache text
-*.csv      text
+*.csv      text eol=crlf
 *.tab      text
 *.tsv      text
 *.txt      text
 *.sql      text
+*.epub     diff=astextplain
 
 # Graphics
 *.png      binary
@@ -39,7 +40,7 @@
 *.tif      binary
 *.tiff     binary
 *.ico      binary
-# SVG treated as an asset (binary) by default.
+# SVG treated as text by default.
 *.svg      text
 # If you want to treat it as binary,
 # use the following line instead.
@@ -50,6 +51,7 @@
 *.bash     text eol=lf
 *.fish     text eol=lf
 *.sh       text eol=lf
+*.zsh      text eol=lf
 # These are explicitly windows files and should use crlf
 *.bat      text eol=crlf
 *.cmd      text eol=crlf
@@ -78,6 +80,9 @@
 
 .gitattributes export-ignore
 .gitignore     export-ignore
+.gitkeep       export-ignore
+# Fix syntax highlighting on GitHub to allow comments
+.vscode/*.json linguist-language=JSON-with-Comments
 ## GITATTRIBUTES FOR WEB PROJECTS
 #
 # These settings are for any web project.
@@ -89,12 +94,18 @@
 # Note that binary is a macro for -text -diff.
 ######################################################################
 
+# Auto detect
+##   Handle line endings automatically for files detected as
+##   text and leave all files detected as binary untouched.
+##   This will handle all files NOT defined below.
+*                 text=auto
+
 # Source code
 *.bash            text eol=lf
 *.bat             text eol=crlf
 *.cmd             text eol=crlf
 *.coffee          text
-*.css             text
+*.css             text diff=css
 *.htm             text diff=html
 *.html            text diff=html
 *.inc             text
@@ -116,6 +127,7 @@
 *.scm             text
 *.scss            text diff=css
 *.sh              text eol=lf
+.husky/*          text eol=lf
 *.sql             text
 *.styl            text
 *.tag             text
@@ -128,13 +140,13 @@
 Dockerfile        text
 
 # Documentation
-*.ipynb           text
-*.markdown        text
-*.md              text
-*.mdwn            text
-*.mdown           text
-*.mkd             text
-*.mkdn            text
+*.ipynb           text eol=lf
+*.markdown        text diff=markdown
+*.md              text diff=markdown
+*.mdwn            text diff=markdown
+*.mdown           text diff=markdown
+*.mkd             text diff=markdown
+*.mkdn            text diff=markdown
 *.mdtxt           text
 *.mdtext          text
 *.txt             text
@@ -156,6 +168,7 @@ TODO              text
 # Templates
 *.dot             text
 *.ejs             text
+*.erb             text
 *.haml            text
 *.handlebars      text
 *.hbs             text
@@ -165,6 +178,7 @@ TODO              text
 *.mustache        text
 *.njk             text
 *.phtml           text
+*.svelte          text
 *.tmpl            text
 *.tpl             text
 *.twig            text
@@ -180,13 +194,19 @@ TODO              text
 .gitconfig        text
 .htaccess         text
 *.lock            text -diff
-package-lock.json text -diff
+package.json      text eol=lf
+package-lock.json text eol=lf -diff
+pnpm-lock.yaml    text eol=lf -diff
+.prettierrc       text
+yarn.lock         text -diff
 *.toml            text
 *.yaml            text
 *.yml             text
 browserslist      text
 Makefile          text
 makefile          text
+# Fixes syntax highlighting on GitHub to allow comments
+tsconfig.json     linguist-language=JSON-with-Comments
 
 # Heroku
 Procfile          text
@@ -234,6 +254,7 @@ Procfile          text
 *.as              binary
 *.asf             binary
 *.asx             binary
+*.avi             binary
 *.fla             binary
 *.flv             binary
 *.m4v             binary
@@ -265,9 +286,15 @@ Procfile          text
 # Executables
 *.exe             binary
 *.pyc             binary
+# Prevents massive diffs caused by vendored, minified files
+**/.yarn/releases/**   binary
+**/.yarn/plugins/**    binary
 
 # RC files (like .babelrc or .eslintrc)
 *.*rc             text
 
 # Ignore files (like .npmignore or .gitignore)
 *.*ignore         text
+
+# Prevents massive diffs from built files
+dist/*            binary

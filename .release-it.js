@@ -1,21 +1,19 @@
 module.exports = {
   hooks: {
-    'after:@release-it/conventional-changelog:bump': "yarn clean-publish --fields 'scripts'",
+    'after:@release-it/conventional-changelog:bump':
+      "pnpm clean-publish --fields 'scripts'",
     'after:release': 'rm -rf ./dist > /dev/null',
   },
   git: {
-    // eslint-disable-next-line no-template-curly-in-string
     requireCleanWorkingDir: true,
     commitMessage: 'chore(workspace): 🤖 release ${version}',
     requireCommits: true,
-    // eslint-disable-next-line no-template-curly-in-string
     tagName: '${version}',
     tag: true,
     push: true,
   },
   github: {
     release: true,
-    // eslint-disable-next-line no-template-curly-in-string
     releaseName: 'Release ${version}',
     tokenRef: 'GITHUB_TOKEN',
   },

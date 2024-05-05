@@ -28,7 +28,7 @@
 ## Installation
 
 ```bash
-yarn add --dev postcss postcss-no-important
+pnpm add -D postcss postcss-no-important
 ```
 
 ## Usage

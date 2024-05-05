@@ -1,9 +1,10 @@
-/* eslint-disable unicorn/prefer-module */
 module.exports = {
-  '*.js': [
-    'yarn prettier -w src',
-    'yarn eslint --config .eslintrc.js --fix --cache "src/**"',
-    'git add .',
+  '*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}': [
+    'pnpm biome format --write --no-errors-on-unmatched --staged', // Format
+    'pnpm biome lint --no-errors-on-unmatched --apply-unsafe --staged', // Lint and apply safe fixes
   ],
-  '*.{json,scss,css,md,html,ejs}': ['yarn prettier -w src', 'git add .'],
+  '*': [
+    'pnpm biome format --write --no-errors-on-unmatched --files-ignore-unknown=true', // Check formatting and lint
+    'pnpm biome lint --no-errors-on-unmatched --files-ignore-unknown=true', // Check formatting and lint
+  ],
 };
