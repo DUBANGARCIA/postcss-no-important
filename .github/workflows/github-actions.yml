@@ -8,7 +8,7 @@ jobs:
         - name: Checkout
           uses: actions/checkout@v3
         - name: Set up Node.js
-          uses: actions/setup-node@v3
+          uses: actions/setup-node@v4
           with:
             node-version-file: '.nvmrc'
             check-latest: true
@@ -38,7 +38,7 @@ jobs:
 #        env:
 #          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 #      - name: Set up Node.js
-#        uses: actions/setup-node@v3
+#        uses: actions/setup-node@v4
 #        with:
 #          node-version-file: '.nvmrc'
 #          check-latest: true
