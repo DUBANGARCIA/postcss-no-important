@@ -1,0 +1,25 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "baseBranches": ["main"],
+  "configMigration": true,
+  "dependencyDashboard": true,
+  "extends": [
+    ":rebaseStalePrs",
+    "config:best-practices",
+    "helpers:pinGitHubActionDigests",
+    "mergeConfidence:all-badges",
+    "regexManagers:biomeVersions",
+    "security:openssf-scorecard"
+  ],
+  "ignorePaths": ["**/node_modules/**"],
+  "minimumReleaseAge": "3 days",
+  "rollbackPrs": true,
+  "semanticCommitScope": "workspace",
+  "semanticCommits": "enabled",
+  "timezone": "America/Chicago",
+  "schedule": "After 7am every weekday",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": "Before 5pm on friday"
+  }
+}
