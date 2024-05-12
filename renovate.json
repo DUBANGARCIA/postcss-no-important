@@ -5,6 +5,9 @@
   "dependencyDashboard": true,
   "extends": [
     ":rebaseStalePrs",
+    ":automergeRequireAllStatusChecks",
+    ":automergeStableNonMajor",
+    "packages:postcss",
     "config:best-practices",
     "helpers:pinGitHubActionDigests",
     "mergeConfidence:all-badges",
