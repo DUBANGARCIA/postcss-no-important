@@ -1,13 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "baseBranches": [
-    "main"
-  ],
+  "baseBranches": ["main"],
   "configMigration": true,
   "dependencyDashboard": true,
   "extends": [
     ":rebaseStalePrs",
     ":automergeRequireAllStatusChecks",
+    ":automergePr",
+    ":automergePatch",
     ":automergeStableNonMajor",
     "packages:postcss",
     "config:best-practices",
@@ -16,9 +16,7 @@
     "customManagers:biomeVersions",
     "security:openssf-scorecard"
   ],
-  "ignorePaths": [
-    "**/node_modules/**"
-  ],
+  "ignorePaths": ["**/node_modules/**"],
   "minimumReleaseAge": "3 days",
   "rollbackPrs": true,
   "semanticCommitScope": "workspace",
