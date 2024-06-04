@@ -33,7 +33,7 @@
     "@release-it/bumper": "6.0.1",
     "@release-it/conventional-changelog": "8.0.1",
     "babel-jest": "29.7.0",
-    "clean-publish": "4.4.0",
+    "clean-publish": "5.0.0",
     "git-cz": "4.9.0",
     "husky": "9.0.11",
     "is-ci": "3.0.1",
