@@ -54,14 +54,14 @@
         "noUnusedVariables": "error",
         "useIsNan": "error",
         "useValidForDirection": "error",
-        "useYield": "error"
+        "useYield": "error",
+        "useArrayLiterals": "error"
       },
       "nursery": {
         "noDoneCallback": "error",
         "noMisplacedAssertion": "error",
         "noRestrictedImports": "error",
         "noUselessUndefinedInitialization": "error",
-        "useArrayLiterals": "error",
         "useDefaultSwitchClause": "error"
       },
       "security": { "noGlobalEval": "error" },
@@ -193,7 +193,7 @@
     "formatter": {
       "jsxQuoteStyle": "double",
       "quoteProperties": "asNeeded",
-      "trailingComma": "all",
+      "trailingCommas": "all",
       "semicolons": "always",
       "arrowParentheses": "always",
       "bracketSpacing": true,
