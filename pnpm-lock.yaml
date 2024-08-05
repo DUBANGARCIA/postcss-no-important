@@ -16,8 +16,8 @@ importers:
         specifier: 7.25.2
         version: 7.25.2
       '@babel/preset-env':
-        specifier: 7.25.2
-        version: 7.25.2(@babel/core@7.25.2)
+        specifier: 7.25.3
+        version: 7.25.3(@babel/core@7.25.2)
       '@biomejs/biome':
         specifier: 1.8.3
         version: 1.8.3
@@ -633,8 +633,8 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0
 
-  '@babel/preset-env@7.25.2':
-    resolution: {integrity: sha512-Y2Vkwy3ITW4id9c6KXshVV/x5yCGK7VdJmKkzOzNsDZMojRKfSA/033rRbLqlRozmhRXCejxWHLSJOg/wUHfzw==}
+  '@babel/preset-env@7.25.3':
+    resolution: {integrity: sha512-QsYW7UeAaXvLPX9tdVliMJE7MD7M6MLYVTovRTIwhoYQVFHR1rM4wO8wqAezYi3/BpSD+NzVCZ69R6smWiIi8g==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -3867,7 +3867,7 @@ snapshots:
       '@babel/helper-create-regexp-features-plugin': 7.25.2(@babel/core@7.25.2)
       '@babel/helper-plugin-utils': 7.24.8
 
-  '@babel/preset-env@7.25.2(@babel/core@7.25.2)':
+  '@babel/preset-env@7.25.3(@babel/core@7.25.2)':
     dependencies:
       '@babel/compat-data': 7.25.2
       '@babel/core': 7.25.2
@@ -6197,7 +6197,7 @@ snapshots:
       ky: 1.5.0
       registry-auth-token: 5.0.2
       registry-url: 6.0.1
-      semver: 7.6.2
+      semver: 7.6.3
 
   parent-module@1.0.1:
     dependencies:
@@ -6467,7 +6467,7 @@ snapshots:
 
   semver-diff@4.0.0:
     dependencies:
-      semver: 7.6.2
+      semver: 7.6.3
 
   semver@6.3.1: {}
 
@@ -6720,7 +6720,7 @@ snapshots:
       is-npm: 6.0.0
       latest-version: 9.0.0
       pupa: 3.1.0
-      semver: 7.6.2
+      semver: 7.6.3
       semver-diff: 4.0.0
       xdg-basedir: 5.1.0
 
