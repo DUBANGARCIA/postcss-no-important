@@ -1,4 +1,4 @@
 module.exports = {
   scopes: ['workspace', 'plugin'],
-  maxMessageLength: 120,
+  maxMessageLength: 100,
 };
