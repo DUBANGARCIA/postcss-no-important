@@ -21,9 +21,6 @@ jobs:
         with:
           install: true
           cache: true
-          tool_versions: |
-            nodejs ${{ matrix.node-version }}
-            pnpm 9.0.6
       - name: Install dependencies
         run: pnpm install --ignore-scripts
       - run: pnpm run test
