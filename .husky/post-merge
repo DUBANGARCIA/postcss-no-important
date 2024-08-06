@@ -1,5 +1,5 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
 
-mise install;
+mise install --yes;
+eval "$(mise env)";
+
 pnpm yarnhook;

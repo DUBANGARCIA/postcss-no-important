@@ -19,7 +19,7 @@
   "scripts": {
     "commit": "pnpm git-cz",
     "postinstall": "pnpm sort-package-json",
-    "prepare": "! ./node_modules/.bin/is-ci && pnpx husky",
+    "prepare": "! ./node_modules/.bin/is-ci && pnpm husky",
     "release": "pnpm release-it --ci",
     "test": "pnpm jest"
   },

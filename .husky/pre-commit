@@ -1,4 +1,5 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+
+mise install --yes;
+eval "$(mise env)";
 
 pnpm lint-staged -c lint-staged.config.js --relative
