@@ -1,4 +1,4 @@
 [tools]
-nodejs = ['20.16.0', 'lts']
+nodejs = ['20.17.0', 'lts']
 pnpm = '9.7.1'
 act = '0.2.65'
