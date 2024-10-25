@@ -40,8 +40,8 @@ importers:
         specifier: 29.7.0
         version: 29.7.0(@babel/core@7.25.9)
       clean-publish:
-        specifier: 5.0.0
-        version: 5.0.0
+        specifier: 5.1.0
+        version: 5.1.0
       git-cz:
         specifier: 4.9.0
         version: 4.9.0
@@ -1245,8 +1245,8 @@ packages:
   cjs-module-lexer@1.4.1:
     resolution: {integrity: sha512-cuSVIHi9/9E/+821Qjdvngor+xpnlwnuwIyZOaLmHBVdXL+gP+I6QQB9VkO7RI77YIcTV+S1W9AreJ5eN63JBA==}
 
-  clean-publish@5.0.0:
-    resolution: {integrity: sha512-1qjtqP3piZL4t8SqGojOyA12bg8AtbFPIQstNvxmss1fhwfma3CqMJ/Y/kbRvAllLX2/c4ZKjcCCKDqEtpcymA==}
+  clean-publish@5.1.0:
+    resolution: {integrity: sha512-Gbz8x7sL/sn0j+2B+yYEumD17WmPT6pHLN+A5nhcd0Sdh86EYblQleU+dUIICXVFalFMFBdW2aGynrVJ6k1u4Q==}
     engines: {node: '>= 18.0.0'}
     hasBin: true
 
@@ -4600,7 +4600,7 @@ snapshots:
 
   cjs-module-lexer@1.4.1: {}
 
-  clean-publish@5.0.0:
+  clean-publish@5.1.0:
     dependencies:
       cross-spawn: 7.0.3
       fast-glob: 3.3.2
