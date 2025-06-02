@@ -12,8 +12,12 @@ jobs:
     steps:
         - name: Checkout
           uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+          with:
+            token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
         - name: Set up Tools
           uses: jdx/mise-action@d6e32c1796099e0f1f3ac741c220a8b7eae9e5dd # v2
+          env:
+            GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
           with:
             install: true
             cache: true
