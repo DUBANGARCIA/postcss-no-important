@@ -27,7 +27,7 @@
 ## Installation
 
 ```bash
-pnpm add -D postcss postcss-no-important
+bun add --dev postcss postcss-no-important
 ```
 
 ## Usage

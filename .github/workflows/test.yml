@@ -22,5 +22,5 @@ jobs:
           install: true
           cache: true
       - name: Install dependencies
-        run: pnpm install --ignore-scripts
-      - run: pnpm run test
+        run: bun install --ignore-scripts
+      - run: bun run test

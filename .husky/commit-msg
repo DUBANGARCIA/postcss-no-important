@@ -2,4 +2,4 @@
 mise install --yes;
 eval "$(mise env)";
 
-pnpm commitlint --edit "$1";
+bun --bun commitlint --edit "$1";

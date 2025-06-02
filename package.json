@@ -17,11 +17,11 @@
   "author": "Duban Garcia <duban162008@hotmail.com>",
   "main": "src/index.js",
   "scripts": {
-    "commit": "pnpm git-cz",
-    "postinstall": "pnpm sort-package-json",
-    "prepare": "! ./node_modules/.bin/is-ci && pnpm husky",
-    "release": "env $(cat .env | xargs) pnpm release-it --ci",
-    "test": "pnpm jest"
+    "commit": "bun git-cz",
+    "postinstall": "bun --bun sort-package-json",
+    "prepare": "! ./node_modules/.bin/is-ci && bun --bun husky",
+    "release": "env $(cat .env | xargs) bun --bun release-it --ci",
+    "test": "bun jest"
   },
   "config": {
     "commitizen": {
@@ -45,11 +45,17 @@
     "jest": "29.7.0",
     "lint-staged": "15.5.1",
     "release-it": "17.11.0",
-    "sort-package-json": "2.14.0",
-    "yarnhook": "0.6.2"
+    "sort-package-json": "2.14.0"
   },
   "peerDependencies": {
-    "postcss": "^8.4.38"
+    "postcss": "^8.5.4"
+  },
+  "engines": {
+    "bun": "1.2.15",
+    "node": "Please use bun instead of Node to use dependencies",
+    "npm": "Please use bun instead of NPM to install dependencies",
+    "pnpm": "Please use bun instead of PNPM to install dependencies",
+    "yarn": "Please use bun instead of Yarn to install dependencies"
   },
   "publishConfig": {
     "directory": "dist"

@@ -2,4 +2,4 @@
 mise install --yes;
 eval "$(mise env)";
 
-pnpm lint-staged -c lint-staged.config.js --relative
+bun --bun lint-staged -c lint-staged.config.js --relative

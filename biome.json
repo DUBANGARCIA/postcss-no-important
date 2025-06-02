@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "formatter": {
     "attributePosition": "auto",
     "enabled": true,
@@ -46,7 +46,8 @@
         "useArrowFunction": "error",
         "useFlatMap": "error",
         "useLiteralKeys": "error",
-        "useRegexLiterals": "error"
+        "useRegexLiterals": "error",
+        "noUselessUndefinedInitialization": "error"
       },
       "correctness": {
         "noConstAssign": "error",
@@ -76,13 +77,7 @@
         "useYield": "error"
       },
       "nursery": {
-        "noDoneCallback": "error",
-        "noDuplicateElseIf": "error",
-        "noMisplacedAssertion": "error",
-        "noUselessUndefinedInitialization": "error",
-        "useConsistentBuiltinInstantiation": "error",
-        "useDefaultSwitchClause": "error",
-        "useExplicitLengthCheck": "error"
+        "noDuplicateElseIf": "error"
       },
       "performance": {
         "noAccumulatingSpread": "error",
@@ -97,6 +92,7 @@
         "noGlobalEval": "error"
       },
       "style": {
+        "noDoneCallback": "error",
         "noArguments": "error",
         "noCommaOperator": "error",
         "noInferrableTypes": "error",
@@ -186,9 +182,13 @@
         "useNumericLiterals": "error",
         "useShorthandAssign": "error",
         "useSingleVarDeclarator": "error",
-        "useTemplate": "error"
+        "useTemplate": "error",
+        "useConsistentBuiltinInstantiation": "error",
+        "useDefaultSwitchClause": "error",
+        "useExplicitLengthCheck": "error"
       },
       "suspicious": {
+        "noMisplacedAssertion": "error",
         "noAssignInExpressions": "error",
         "noAsyncPromiseExecutor": "error",
         "noCatchAssign": "error",
