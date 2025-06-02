@@ -35,7 +35,7 @@
     "@commitlint/cli": "19.8.0",
     "@commitlint/config-conventional": "19.8.0",
     "@jest/globals": "29.7.0",
-    "@release-it/bumper": "6.0.1",
+    "@release-it/bumper": "7.0.5",
     "@release-it/conventional-changelog": "8.0.2",
     "babel-jest": "29.7.0",
     "clean-publish": "5.1.0",
