@@ -13,7 +13,7 @@
         "@release-it/bumper": "7.0.5",
         "@release-it/conventional-changelog": "10.0.1",
         "babel-jest": "29.7.0",
-        "clean-publish": "5.1.0",
+        "clean-publish": "5.2.1",
         "git-cz": "4.9.0",
         "husky": "9.1.7",
         "is-ci": "4.1.0",
@@ -512,7 +512,7 @@
 
     "cjs-module-lexer": ["cjs-module-lexer@1.4.3", "", {}, "sha512-9z8TZaGM1pfswYeXrUpzPrkx8UnWYdhJclsiYMm6x/w5+nN+8Tf/LnAgfLGQCm59qAOxU8WwHEq2vNwF6i4j+Q=="],
 
-    "clean-publish": ["clean-publish@5.1.0", "", { "dependencies": { "cross-spawn": "^7.0.3", "fast-glob": "^3.3.2", "lilconfig": "^3.1.2", "micromatch": "^4.0.8" }, "bin": { "clean-publish": "clean-publish.js", "clear-package-json": "clear-package-json.js" } }, "sha512-Gbz8x7sL/sn0j+2B+yYEumD17WmPT6pHLN+A5nhcd0Sdh86EYblQleU+dUIICXVFalFMFBdW2aGynrVJ6k1u4Q=="],
+    "clean-publish": ["clean-publish@5.2.1", "", { "dependencies": { "cross-spawn": "^7.0.6", "fast-glob": "^3.3.3", "lilconfig": "^3.1.3", "micromatch": "^4.0.8" }, "bin": { "clean-publish": "clean-publish.js", "clear-package-json": "clear-package-json.js" } }, "sha512-NbVdbx/1NRxaD7nB7v6cPUGB2oVSV1QPwqswvI3W6Ii2A1gcPw6EnDV+xNcUTz6jc8e0bFr6Q08Mc0kSIc6DqQ=="],
 
     "cli-boxes": ["cli-boxes@3.0.0", "", {}, "sha512-/lzGpEWL/8PfI0BmBOPRwp0c/wFNX1RdUML3jK/RcSBA9T8mZDdQpqYBKtCFTOfQbwPqWEOpjqW+Fnayc0969g=="],
 
