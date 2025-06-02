@@ -1,4 +1,11 @@
+# Changelog
 
+# [10.2.0](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.1.0...10.2.0) (2025-06-02)
+
+
+### Features
+
+* **workspace:** 🎸 migrate from pnpm to bun as package manager ([aadde56](https://github.com/DUBANGARCIA/postcss-no-important/commit/aadde564408231a218f2875c34b148f1706aacbd))
 
 # [10.1.0](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.0.7...10.1.0) (2024-08-16)
 
