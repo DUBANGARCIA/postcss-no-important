@@ -1,5 +1,7 @@
 # Changelog
 
+## [10.2.1](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.2.0...10.2.1) (2025-06-04)
+
 # [10.2.0](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.1.0...10.2.0) (2025-06-02)
 
 
