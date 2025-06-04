@@ -2,7 +2,12 @@
   "name": "postcss-no-important",
   "version": "10.2.0",
   "description": "PostCSS plugin for delete declarations !important",
-  "keywords": ["postcss", "css", "postcss-plugin", "important"],
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "important"
+  ],
   "homepage": "https://github.com/DUBANGARCIA/postcss-no-important",
   "bugs": {
     "url": "https://github.com/DUBANGARCIA/postcss-no-important/issues"
@@ -58,6 +63,10 @@
   "clean-publish": {
     "withoutPublish": true,
     "tempDir": "dist",
-    "files": [".idea", ".husky", "lint-staged.config.js"]
+    "files": [
+      ".idea",
+      ".husky",
+      "lint-staged.config.js"
+    ]
   }
 }
