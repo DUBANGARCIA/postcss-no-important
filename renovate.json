@@ -1,6 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "baseBranches": ["main"],
+  "baseBranchPatterns": [
+    "main"
+  ],
   "configMigration": true,
   "dependencyDashboard": true,
   "extends": [
@@ -15,8 +17,12 @@
     "mergeConfidence:all-badges",
     "security:openssf-scorecard"
   ],
-  "ignorePaths": ["**/node_modules/**"],
-  "postUpdateOptions": ["pnpmDedupe"],
+  "ignorePaths": [
+    "**/node_modules/**"
+  ],
+  "postUpdateOptions": [
+    "pnpmDedupe"
+  ],
   "minimumReleaseAge": "3 days",
   "rollbackPrs": true,
   "semanticCommitScope": "workspace",
