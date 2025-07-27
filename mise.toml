@@ -1,4 +1,4 @@
 [tools]
-node = '22.16.0'
-bun = '1.2.15'
-"aqua:nektos/act" = '0.2.78'
+node = '22.17.1'
+bun = '1.2.19'
+"aqua:nektos/act" = '0.2.79'
