@@ -45,6 +45,10 @@
     {
       "groupName": "Bun Version Update",
       "matchPackageNames": ["oven-sh/bun"]
+    },
+    {
+      "matchDepTypes": ["peerDependencies"],
+      "rangeStrategy": "auto"
     }
   ],
   "ignorePaths": ["**/node_modules/**"],
