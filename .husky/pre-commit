@@ -1,5 +1,0 @@
-
-mise install --yes;
-eval "$(mise env)";
-
-bun --bun lint-staged -c lint-staged.config.js --relative --concurrent false

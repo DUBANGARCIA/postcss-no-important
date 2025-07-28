@@ -2,6 +2,32 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "baseBranches": ["main"],
   "configMigration": true,
+  "constraints": {
+    "bun": "1.2.19"
+  },
+  "customManagers": [
+    {
+      "customType": "regex",
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "oven-sh/bun",
+      "extractVersionTemplate": "^bun-v(?<version>.*)$",
+      "managerFilePatterns": ["/package\\.json/"],
+      "matchStrings": [
+        "\"bun\"\\s*:\\s*\"(?<currentValue>[^\"]+)\"",
+        "\"packageManager\"\\s*:\\s*\"bun@(?<currentValue>[^\"]+)\""
+      ],
+      "versioningTemplate": "semver"
+    },
+    {
+      "customType": "regex",
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "oven-sh/bun",
+      "extractVersionTemplate": "^bun-v(?<version>.*)$",
+      "managerFilePatterns": ["/^renovate\\.json$/"],
+      "matchStrings": ["\"bun\"\\s*:\\s*\"(?<currentValue>[^\"]+)\""],
+      "versioningTemplate": "semver"
+    }
+  ],
   "dependencyDashboard": true,
   "extends": [
     ":rebaseStalePrs",
@@ -15,16 +41,18 @@
     "mergeConfidence:all-badges",
     "security:openssf-scorecard"
   ],
+  "packageRules": [
+    {
+      "groupName": "Bun Version Update",
+      "matchPackageNames": ["oven-sh/bun"]
+    }
+  ],
   "ignorePaths": ["**/node_modules/**"],
-  "postUpdateOptions": ["pnpmDedupe"],
   "minimumReleaseAge": "3 days",
   "rollbackPrs": true,
+  "rangeStrategy": "pin",
   "semanticCommitScope": "workspace",
   "semanticCommits": "enabled",
   "timezone": "America/Chicago",
-  "schedule": "After 7am every weekday",
-  "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": "Before 5pm on friday"
-  }
+  "schedule": "After 7am every weekday"
 }

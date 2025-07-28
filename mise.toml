@@ -1,4 +1,7 @@
 [tools]
-node = '22.17.1'
 bun = '1.2.19'
 "aqua:nektos/act" = '0.2.79'
+"aqua:evilmartians/lefthook" = "1.12.2"
+
+[env]
+LEFTHOOK_VERBOSE="true"

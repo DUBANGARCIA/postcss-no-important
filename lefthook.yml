@@ -1,0 +1,39 @@
+pre-commit:
+  parallel: false
+  jobs:
+    - run: mise trust
+    - run: mise install --yes
+    - run: eval "$(mise env)"
+  commands:
+    format:
+      glob: '*'
+      run: bun --bun biome format --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+      stage_fixed: true
+    lint:
+      glob: '*'
+      run: bun --bun biome lint --write --unsafe --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+      stage_fixed: true
+    sort-package-json:
+      glob: '**/package.json'
+      run: bun sort-package-json {staged_files}
+      stage_fixed: true
+
+commit-msg:
+  parallel: false
+  jobs:
+    - run: mise trust
+    - run: mise install --yes
+    - run: eval "$(mise env)"
+  commands:
+    commitlint:
+      run: bun --bun commitlint --config commitlint.config.js --edit "$1"
+
+post-checkout, post-merge, post-rewrite:
+  parallel: false
+  jobs:
+    - run: mise trust
+    - run: mise install --yes
+    - run: eval "$(mise env)"
+  commands:
+    bun-install:
+      run: bun install --frozen-lockfile

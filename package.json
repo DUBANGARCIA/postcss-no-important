@@ -17,15 +17,17 @@
   "author": "Duban Garcia <duban162008@hotmail.com>",
   "main": "src/index.js",
   "scripts": {
-    "commit": "bun git-cz",
+    "commit": "bun --bun git-czg",
     "postinstall": "bun --bun sort-package-json",
-    "prepare": "! ./node_modules/.bin/is-ci && bun --bun husky",
+    "prepare": "bun --bun is-ci || (echo 'You are not in CI, installing hooks...' && lefthook install)",
     "release": "env $(cat .env | xargs) bun --bun release-it --ci",
     "test": "bun jest"
   },
   "config": {
     "commitizen": {
-      "path": "git-cz"
+      "path": "./node_modules/cz-git",
+      "czConfig": "./commitlint.config.js",
+      "useEmoji": true
     }
   },
   "devDependencies": {
@@ -39,11 +41,10 @@
     "@release-it/conventional-changelog": "10.0.1",
     "babel-jest": "30.0.5",
     "clean-publish": "5.2.2",
-    "git-cz": "4.9.0",
-    "husky": "9.1.7",
+    "cz-git": "^1.12.0",
+    "czg": "^1.12.0",
     "is-ci": "4.1.0",
     "jest": "30.0.5",
-    "lint-staged": "16.1.2",
     "release-it": "19.0.4",
     "sort-package-json": "3.4.0"
   },

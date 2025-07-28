@@ -1,5 +1,0 @@
-
-mise install --yes;
-eval "$(mise env)";
-
-bun --bun commitlint --edit "$1";
