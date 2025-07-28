@@ -1,8 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "baseBranchPatterns": [
-    "main"
-  ],
+  "baseBranchPatterns": ["main"],
   "configMigration": true,
   "constraints": {
     "bun": "1.2.19"
@@ -13,9 +11,7 @@
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "oven-sh/bun",
       "extractVersionTemplate": "^bun-v(?<version>.*)$",
-      "managerFilePatterns": [
-        "/package\\.json/"
-      ],
+      "managerFilePatterns": ["/package\\.json/"],
       "matchStrings": [
         "\"bun\"\\s*:\\s*\"(?<currentValue>[^\"]+)\"",
         "\"packageManager\"\\s*:\\s*\"bun@(?<currentValue>[^\"]+)\""
@@ -27,12 +23,8 @@
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "oven-sh/bun",
       "extractVersionTemplate": "^bun-v(?<version>.*)$",
-      "managerFilePatterns": [
-        "/^renovate\\.json$/"
-      ],
-      "matchStrings": [
-        "\"bun\"\\s*:\\s*\"(?<currentValue>[^\"]+)\""
-      ],
+      "managerFilePatterns": ["/^renovate\\.json$/"],
+      "matchStrings": ["\"bun\"\\s*:\\s*\"(?<currentValue>[^\"]+)\""],
       "versioningTemplate": "semver"
     }
   ],
@@ -52,14 +44,10 @@
   "packageRules": [
     {
       "groupName": "Bun Version Update",
-      "matchPackageNames": [
-        "oven-sh/bun"
-      ]
+      "matchPackageNames": ["oven-sh/bun"]
     }
   ],
-  "ignorePaths": [
-    "**/node_modules/**"
-  ],
+  "ignorePaths": ["**/node_modules/**"],
   "minimumReleaseAge": "3 days",
   "rollbackPrs": true,
   "rangeStrategy": "pin",
