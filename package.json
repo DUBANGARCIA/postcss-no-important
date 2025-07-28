@@ -52,7 +52,7 @@
     "postcss": "^8.5.4"
   },
   "engines": {
-    "bun": "1.2.15",
+    "bun": "1.2.19",
     "node": "Please use bun instead of Node to use dependencies",
     "npm": "Please use bun instead of NPM to install dependencies",
     "pnpm": "Please use bun instead of PNPM to install dependencies",
