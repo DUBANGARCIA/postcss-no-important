@@ -39,7 +39,8 @@
     "customManagers:biomeVersions",
     "packages:postcss",
     "mergeConfidence:all-badges",
-    "security:openssf-scorecard"
+    "security:openssf-scorecard",
+    "schedule:officeHours"
   ],
   "packageRules": [
     {

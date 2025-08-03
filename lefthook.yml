@@ -6,14 +6,17 @@ pre-commit:
     - run: eval "$(mise env)"
   commands:
     format:
+      priority: 1
       glob: '*'
       run: bun --bun biome format --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
       stage_fixed: true
     lint:
+      priority: 2
       glob: '*'
       run: bun --bun biome lint --write --unsafe --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
       stage_fixed: true
     sort-package-json:
+      priority: 3
       glob: '**/package.json'
       run: bun sort-package-json {staged_files}
       stage_fixed: true
