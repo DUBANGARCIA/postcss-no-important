@@ -28,5 +28,6 @@ jobs:
           with:
             install: true
             cache: true
+            log_level: 'debug'
         - name: Install dependencies
-          run: bun install --ignore-scripts
+          run: bun install --frozen-lockfile
