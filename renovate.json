@@ -26,6 +26,15 @@
       "managerFilePatterns": ["/^renovate\\.json$/"],
       "matchStrings": ["\"bun\"\\s*:\\s*\"(?<currentValue>[^\"]+)\""],
       "versioningTemplate": "semver"
+    },
+    {
+      "customType": "regex",
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "oven-sh/bun",
+      "extractVersionTemplate": "^bun-v(?<version>.*)$",
+      "managerFilePatterns": ["/build\\.yml$/", "/test\\.yml$/"],
+      "matchStrings": ["bun-version:\\s*(?<currentValue>[\\d\\.]+)"],
+      "versioningTemplate": "semver"
     }
   ],
   "dependencyDashboard": true,
