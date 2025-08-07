@@ -1,6 +1,6 @@
 [tools]
 bun = '1.2.19'
-"aqua:nektos/act" = '0.2.79'
+"aqua:nektos/act" = '0.2.80'
 "aqua:evilmartians/lefthook" = "1.12.2"
 
 [env]
