@@ -1,6 +1,6 @@
 import postcss from 'postcss';
-import { describe, expect, test } from '@jest/globals';
 import plugin from '../src';
+import { describe, test, expect } from 'bun:test';
 
 describe('main', () => {
   test('delete !important', async () => {

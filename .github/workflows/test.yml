@@ -1,6 +1,6 @@
 name: Testing
 
-on: [push]
+on: [push, pull_request]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -8,6 +8,7 @@ concurrency:
 
 permissions:
   contents: read
+  pull-requests: write
 
 jobs:
   test:
@@ -17,11 +18,13 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - name: Checkout code
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
 
-      - uses: oven-sh/setup-bun@v2
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -32,5 +35,57 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bun install --frozen-lockfile --no-interactive
 
-      - name: Install dependencies
-        run: bun run test
+      - name: Run tests with coverage
+        run: bun test --coverage
+
+      - name: Upload coverage artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-${{ matrix.os }}-node${{ matrix.node-version }}
+          path: coverage/
+          retention-days: 7
+
+      - name: Upload to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./coverage/lcov.info
+          flags: ${{ matrix.os }}-node${{ matrix.node-version }}
+          name: ${{ matrix.os }}-node${{ matrix.node-version }}
+          fail_ci_if_error: false
+
+  coverage-summary:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download coverage from Ubuntu + Node 22
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage-ubuntu-latest-node22
+          path: coverage/
+
+      - name: Display coverage summary
+        run: |
+          if [ -f coverage/lcov.info ]; then
+            echo "📊 Coverage Report Generated"
+            echo "Files in coverage/:"
+            ls -la coverage/
+          
+            if command -v lcov >/dev/null 2>&1; then
+              lcov --summary coverage/lcov.info 2>/dev/null || echo "LCOV summary not available"
+            fi
+          else
+            echo "⚠️ No coverage report found"
+          fi
+
+      - name: Upload final coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: final-coverage-report
+          path: coverage/
+          retention-days: 30
