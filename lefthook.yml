@@ -20,6 +20,11 @@ pre-commit:
       glob: '**/package.json'
       run: bun sort-package-json {staged_files}
       stage_fixed: true
+    toml:
+      priority: 4
+      glob: '*.toml'
+      run: bun --bun taplo fmt {staged_files}
+      stage_fixed: true
 
 commit-msg:
   parallel: false

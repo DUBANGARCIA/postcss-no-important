@@ -1,10 +1,10 @@
 logLevel = "warn"
 
 [install]
-linker = "isolated"
-registry = "https://registry.npmjs.org"
+  linker   = "isolated"
+  registry = "https://registry.npmjs.org"
 
 [test]
-coverage = true
-coverageThreshold = { line = 0.65, function = 0.8, statement = 0.9 }
-coverageReporter = ["lcov", "text"]
+  coverage          = true
+  coverageReporter  = ["lcov", "text"]
+  coverageThreshold = { line = 0.65, function = 0.8, statement = 0.9 }
