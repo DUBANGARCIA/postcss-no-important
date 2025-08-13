@@ -1,7 +1,7 @@
 [tools]
   "aqua:evilmartians/lefthook" = "1.12.2"
   "aqua:nektos/act"            = '0.2.80'
-  bun                          = '1.2.19'
+  bun                          = '1.2.20'
 
 [env]
   LEFTHOOK_VERBOSE = "true"
