@@ -1,6 +1,7 @@
 module.exports = {
   hooks: {
-    'after:@release-it/conventional-changelog:bump': "bun --bun clean-publish --fields 'scripts'",
+    'after:@release-it/conventional-changelog:bump':
+      "bun --bun clean-publish --fields 'scripts,engines'",
     'after:release': 'rm -rf ./dist > /dev/null',
   },
   git: {

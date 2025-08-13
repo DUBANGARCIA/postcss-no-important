@@ -60,9 +60,7 @@
     "withoutPublish": true,
     "tempDir": "dist",
     "files": [
-      ".idea",
-      ".husky",
-      "lint-staged.config.js"
+      ".idea"
     ]
   }
 }
