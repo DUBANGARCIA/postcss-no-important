@@ -32,7 +32,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          bun-version: 1.2.19
+          bun-version: 1.2.20
 
       - name: Restore cache
         id: restore-cache
