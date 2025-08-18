@@ -1,5 +1,5 @@
 [tools]
-  "aqua:evilmartians/lefthook" = "1.12.2"
+  "aqua:evilmartians/lefthook" = "1.12.3"
   "aqua:nektos/act"            = '0.2.80'
   bun                          = '1.2.20'
 
