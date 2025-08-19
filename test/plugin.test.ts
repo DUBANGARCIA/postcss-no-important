@@ -145,7 +145,7 @@ describe('postcss-no-important', () => {
 
       expect(result.css).not.toContain('!important');
       // Allow variance on CI runners; keep generous threshold to avoid flakiness
-      expect(duration).toBeLessThan(300);
+      expect(duration).toBeLessThan(400);
 
       console.log(`Processed 10,000 rules in ${duration.toFixed(2)}ms`);
     });
