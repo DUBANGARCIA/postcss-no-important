@@ -23,6 +23,10 @@
     },
     "globals": ["__dirname", "__filename", "exports", "module", "require"]
   },
+  "files": {
+    "includes": ["**/*.{js,cjs,mjs,ts,cts,mts,json}"],
+    "experimentalScannerIgnores": ["dist/**", "coverage/**", "node_modules/**", "test/fixtures/**"]
+  },
   "linter": {
     "enabled": true,
     "rules": {

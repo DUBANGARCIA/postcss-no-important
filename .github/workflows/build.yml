@@ -41,6 +41,8 @@ jobs:
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           run: bun install --frozen-lockfile --no-interactive
+        - name: Type check
+          run: bun run type-check
         - uses: actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809 # v4
           with:
             path: |

@@ -14,14 +14,36 @@
   },
   "repository": "DUBANGARCIA/postcss-no-important",
   "license": "MIT",
-  "author": "Duban Garcia <duban162008@hotmail.com>",
-  "main": "src/index.js",
+  "author": "Duban Garcia <duban162008@gmail.com>",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build:release": "bun --bun tsup",
     "commit": "bun --bun git-czg",
     "postinstall": "bun --bun sort-package-json",
     "prepare": "bun --bun is-ci || (echo 'You are not in CI, installing hooks...' && lefthook install)",
     "release": "env $(cat .env | xargs) bun --bun release-it --ci",
-    "test": "bun test"
+    "test": "bun vitest run",
+    "test:coverage": "bun vitest run --coverage",
+    "test:watch": "bun vitest",
+    "type-check": "bun --bun tsc --noEmit"
   },
   "config": {
     "commitizen": {
@@ -37,15 +59,25 @@
     "@release-it/bumper": "7.0.5",
     "@release-it/conventional-changelog": "10.0.1",
     "@taplo/cli": "0.7.0",
+    "@tsconfig/bun": "^1.0.8",
+    "@tsconfig/node-lts": "^22.0.2",
+    "@tsconfig/node-ts": "^23.6.1",
+    "@tsconfig/recommended": "^1.0.10",
+    "@types/bun": "^1.2.20",
+    "@types/node": "^20.0.0",
+    "@vitest/coverage-v8": "^3.2.4",
     "clean-publish": "5.2.2",
     "cz-git": "1.12.0",
     "czg": "1.12.0",
     "is-ci": "4.1.0",
     "release-it": "19.0.4",
-    "sort-package-json": "3.4.0"
+    "sort-package-json": "3.4.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^3.2.4"
   },
   "peerDependencies": {
-    "postcss": "^8.5.4"
+    "postcss": "^8.0.0"
   },
   "engines": {
     "bun": "1.2.20",
