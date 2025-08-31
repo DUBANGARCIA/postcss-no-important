@@ -25,7 +25,7 @@ jobs:
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           with:
-            bun-version: 1.2.20
+            bun-version: 1.2.21
         - name: Restore cache
           id: restore-cache
           uses: actions/cache/restore@0400d5f644dc74513175e3cd8d07132dd4860809 # v4
