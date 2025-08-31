@@ -44,4 +44,7 @@ post-checkout, post-merge, post-rewrite:
     - run: eval "$(mise env)"
   commands:
     bun-install:
+      glob: "{package.json,bun.lock,bunfig.toml}"
       run: bun install --frozen-lockfile
+      only:
+        - changed
