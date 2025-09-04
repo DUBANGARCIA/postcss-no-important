@@ -35,11 +35,11 @@
     "dist"
   ],
   "scripts": {
-    "build:release": "bun --bun tsup",
+    "build:release": "rm -rf ./dist ./dist-releas && bun --bun tsup",
     "commit": "bun --bun git-czg",
     "postinstall": "bun --bun sort-package-json",
     "prepare": "bun --bun is-ci || (echo 'You are not in CI, installing hooks...' && lefthook install)",
-    "release": "env $(cat .env | xargs) bun --bun release-it --ci",
+    "release": "env $(cat .env | xargs) bun release-it --ci",
     "test": "bun vitest run",
     "test:coverage": "bun vitest run --coverage",
     "test:watch": "bun vitest",
@@ -51,6 +51,10 @@
       "czConfig": "./commitlint.config.js",
       "useEmoji": true
     }
+  },
+  "overrides": {
+    "@conventional-changelog/git-client": "2.5.1",
+    "conventional-changelog-conventionalcommits": "8.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.2",

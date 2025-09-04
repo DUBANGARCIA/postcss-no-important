@@ -1,9 +1,9 @@
 module.exports = {
   hooks: {
-    'before:@release-it/conventional-changelog:bump': 'bun run type-check && bun run build:release',
-    'after:@release-it/conventional-changelog:bump':
-      "bun --bun clean-publish --fields 'scripts,engines'",
-    'after:release': 'rm -rf ./dist > /dev/null',
+    'before:bump': 'bun run type-check && bun run build:release',
+    'after:bump':
+      "bun --bun clean-publish --fields 'scripts,engines,config,overrides' --temp-dir dist-release",
+    'after:release': 'rm -rf ./dist ./dist-release > /dev/null',
   },
   git: {
     requireCleanWorkingDir: true,
@@ -23,7 +23,7 @@ module.exports = {
   },
   npm: {
     publish: true,
-    publishPath: './dist',
+    publishPath: './dist-release',
   },
   publishConfig: {
     registry: 'https://registry.npmjs.org',
