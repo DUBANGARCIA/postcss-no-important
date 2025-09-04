@@ -1,5 +1,17 @@
 # Changelog
 
+# [11.0.0](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.2.1...11.0.0) (2025-09-04)
+
+
+### Features
+
+* **plugin:** ✨ configurations were added to the plug-in to make it more versatile ([ff29b0a](https://github.com/DUBANGARCIA/postcss-no-important/commit/ff29b0aa0a0a59ee722693e1232dd655221b0b7d))
+
+
+### BREAKING CHANGES
+
+* **plugin:** Migrate the project to TypeScript using vitest as the testing runner.
+
 ## [10.2.1](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.2.0...10.2.1) (2025-06-04)
 
 # [10.2.0](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.1.0...10.2.0) (2025-06-02)
