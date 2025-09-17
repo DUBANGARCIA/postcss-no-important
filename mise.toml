@@ -1,7 +1,7 @@
 [tools]
   "aqua:evilmartians/lefthook" = "1.13.0"
   "aqua:nektos/act"            = '0.2.81'
-  bun                          = '1.2.21'
+  bun                          = '1.2.22'
   node                         = "22.19.0"
 
 [env]
