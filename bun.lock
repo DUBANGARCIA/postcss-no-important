@@ -5,7 +5,7 @@
       "name": "postcss-no-important",
       "devDependencies": {
         "@biomejs/biome": "2.2.4",
-        "@commitlint/cli": "20.0.0",
+        "@commitlint/cli": "20.1.0",
         "@commitlint/config-conventional": "20.0.0",
         "@release-it/bumper": "7.0.5",
         "@release-it/conventional-changelog": "10.0.1",
@@ -69,7 +69,7 @@
 
     "@biomejs/cli-win32-x64": ["@biomejs/cli-win32-x64@2.2.4", "", { "os": "win32", "cpu": "x64" }, "sha512-3Y4V4zVRarVh/B/eSHczR4LYoSVyv3Dfuvm3cWs5w/HScccS0+Wt/lHOcDTRYeHjQmMYVC3rIRWqyN2EI52+zg=="],
 
-    "@commitlint/cli": ["@commitlint/cli@20.0.0", "", { "dependencies": { "@commitlint/format": "^20.0.0", "@commitlint/lint": "^20.0.0", "@commitlint/load": "^20.0.0", "@commitlint/read": "^20.0.0", "@commitlint/types": "^20.0.0", "tinyexec": "^1.0.0", "yargs": "^17.0.0" }, "bin": { "commitlint": "./cli.js" } }, "sha512-I3D7Yldq8ZhOB3qEaTvXWIgib6tSZhbCpRObfFQ/aYI0J9AH8NMwT07Ak+bpE3n6Yn7EtbqEhQUkJZ/jZ5kCeQ=="],
+    "@commitlint/cli": ["@commitlint/cli@20.1.0", "", { "dependencies": { "@commitlint/format": "^20.0.0", "@commitlint/lint": "^20.0.0", "@commitlint/load": "^20.1.0", "@commitlint/read": "^20.0.0", "@commitlint/types": "^20.0.0", "tinyexec": "^1.0.0", "yargs": "^17.0.0" }, "bin": { "commitlint": "./cli.js" } }, "sha512-pW5ujjrOovhq5RcYv5xCpb4GkZxkO2+GtOdBW2/qrr0Ll9tl3PX0aBBobGQl3mdZUbOBgwAexEQLeH6uxL0VYg=="],
 
     "@commitlint/config-conventional": ["@commitlint/config-conventional@20.0.0", "", { "dependencies": { "@commitlint/types": "^20.0.0", "conventional-changelog-conventionalcommits": "^7.0.2" } }, "sha512-q7JroPIkDBtyOkVe9Bca0p7kAUYxZMxkrBArCfuD3yN4KjRAenP9PmYwnn7rsw8Q+hHq1QB2BRmBh0/Z19ZoJw=="],
 
