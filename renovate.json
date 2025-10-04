@@ -35,17 +35,6 @@
       "managerFilePatterns": ["/build\\.yml$/", "/test\\.yml$/"],
       "matchStrings": ["bun-version:\\s*(?<currentValue>[\\d\\.]+)"],
       "versioningTemplate": "semver"
-    },
-    {
-      "customType": "regex",
-      "datasourceTemplate": "docker",
-      "depNameTemplate": "catthehacker/ubuntu",
-      "managerFilePatterns": ["/\\.actrc$/"],
-      "matchStrings": [
-        "-P\\s+ubuntu-(?<currentValue>\\d+\\.\\d+)=catthehacker/ubuntu:act-(?<version>\\d+\\.\\d+)",
-        "-P\\s+ubuntu-latest=catthehacker/ubuntu:act-(?<currentValue>latest)"
-      ],
-      "versioningTemplate": "loose"
     }
   ],
   "dependencyDashboard": true,
