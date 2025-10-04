@@ -25,6 +25,10 @@ pre-commit:
       glob: '*.toml'
       run: bun --bun taplo fmt {staged_files}
       stage_fixed: true
+    actionlint:
+      priority: 2
+      glob: '.github/workflows/*.{yml,yaml}'
+      run: actionlint {staged_files}
 
 commit-msg:
   parallel: false

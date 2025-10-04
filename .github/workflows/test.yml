@@ -14,7 +14,6 @@ jobs:
   test:
     strategy:
       matrix:
-        node-version: [20, 22, 24]
         os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     steps:
@@ -53,7 +52,7 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()
         with:
-          name: coverage-${{ matrix.os }}-node${{ matrix.node-version }}
+          name: coverage-${{ matrix.os }}-node
           path: coverage/
           retention-days: 7
 
@@ -62,8 +61,8 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./coverage/lcov.info
-          flags: ${{ matrix.os }}-node${{ matrix.node-version }}
-          name: ${{ matrix.os }}-node${{ matrix.node-version }}
+          flags: ${{ matrix.os }}-node
+          name: ${{ matrix.os }}-node
           fail_ci_if_error: false
 
   coverage-summary:
@@ -76,7 +75,7 @@ jobs:
       - name: Download coverage from Ubuntu
         uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5
         with:
-          name: coverage-ubuntu-latest-node${{ matrix.node-version }}
+          name: coverage-ubuntu-latest-node
           path: coverage/
 
       - name: Display coverage summary
