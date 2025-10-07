@@ -1,6 +1,6 @@
 [tools]
   "aqua:evilmartians/lefthook" = "1.13.4"
-  "aqua:nektos/act"            = "0.2.81"
+  "aqua:nektos/act"            = "0.2.82"
   "aqua:rhysd/actionlint"      = "1.7.7"
   bun                          = '1.2.23'
   node                         = "22.20.0"
