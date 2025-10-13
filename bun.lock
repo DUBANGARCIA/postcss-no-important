@@ -10,7 +10,7 @@
         "@release-it/bumper": "7.0.5",
         "@release-it/conventional-changelog": "10.0.1",
         "@taplo/cli": "0.7.0",
-        "@tsconfig/bun": "1.0.8",
+        "@tsconfig/bun": "1.0.9",
         "@tsconfig/node-lts": "22.0.2",
         "@tsconfig/node-ts": "23.6.1",
         "@tsconfig/recommended": "1.0.10",
@@ -293,7 +293,7 @@
 
     "@tootallnate/quickjs-emscripten": ["@tootallnate/quickjs-emscripten@0.23.0", "", {}, "sha512-C5Mc6rdnsaJDjO3UpGW/CQTHtCKaYlScZTly4JIu97Jxo/odCiH0ITnDXSJPTOrEKk/ycSZ0AOgTmkDtkOsvIA=="],
 
-    "@tsconfig/bun": ["@tsconfig/bun@1.0.8", "", {}, "sha512-JlJaRaS4hBTypxtFe8WhnwV8blf0R+3yehLk8XuyxUYNx6VXsKCjACSCvOYEFUiqlhlBWxtYCn/zRlOb8BzBQg=="],
+    "@tsconfig/bun": ["@tsconfig/bun@1.0.9", "", {}, "sha512-4M0/Ivfwcpz325z6CwSifOBZYji3DFOEpY6zEUt0+Xi2qRhzwvmqQN9XAHJh3OVvRJuAqVTLU2abdCplvp6mwQ=="],
 
     "@tsconfig/node-lts": ["@tsconfig/node-lts@22.0.2", "", {}, "sha512-Kgq5yXTvnUnvlhob0xJpOH4na9PWtuFhHSf94MpDwnENWgiFeJKDNANQV2MT1WpXZYkK2WSWfVYKhVkR7bc8TA=="],
 
