@@ -76,7 +76,7 @@
     "is-ci": "4.1.0",
     "release-it": "19.0.6",
     "sort-package-json": "3.4.0",
-    "tsup": "8.5.0",
+    "tsup": "8.5.1",
     "typescript": "5.9.3",
     "vitest": "4.0.8"
   },
