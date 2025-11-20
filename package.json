@@ -61,7 +61,7 @@
     "@commitlint/cli": "20.1.0",
     "@commitlint/config-conventional": "20.0.0",
     "@release-it/bumper": "7.0.5",
-    "@release-it/conventional-changelog": "10.0.1",
+    "@release-it/conventional-changelog": "10.0.2",
     "@taplo/cli": "0.7.0",
     "@tsconfig/bun": "1.0.10",
     "@tsconfig/node-lts": "22.0.3",
