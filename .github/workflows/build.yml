@@ -28,7 +28,7 @@ jobs:
             bun-version: 1.3.4
         - name: Restore cache
           id: restore-cache
-          uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+          uses: actions/cache/restore@9255dc7a253b0ccc959486e2bca901246202afeb # v5
           with:
             path: |
               ~/.bun/install/cache
@@ -39,7 +39,7 @@ jobs:
           run: bun install --frozen-lockfile --no-interactive
         - name: Type check
           run: bun run type-check
-        - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        - uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5
           with:
             path: |
               ~/.bun/install/cache
