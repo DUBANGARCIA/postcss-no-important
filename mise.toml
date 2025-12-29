@@ -1,5 +1,5 @@
 [tools]
-  "aqua:evilmartians/lefthook" = "2.0.12"
+  "aqua:evilmartians/lefthook" = "2.0.13"
   "aqua:nektos/act"            = "0.2.83"
   "aqua:rhysd/actionlint"      = "1.7.9"
   bun                          = '1.3.5'
