@@ -2,7 +2,7 @@
   "aqua:evilmartians/lefthook" = "2.0.14"
   "aqua:nektos/act"            = "0.2.84"
   "aqua:rhysd/actionlint"      = "1.7.10"
-  bun                          = '1.3.5'
+  bun                          = '1.3.6'
   node                         = "24.13.0"
 
 [env]

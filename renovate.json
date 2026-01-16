@@ -3,7 +3,7 @@
   "baseBranchPatterns": ["main"],
   "configMigration": true,
   "constraints": {
-    "bun": "1.3.5"
+    "bun": "1.3.6"
   },
   "customManagers": [
     {
