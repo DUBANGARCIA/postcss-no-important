@@ -13,7 +13,7 @@
         "@taplo/cli": "0.7.0",
         "@tsconfig/bun": "1.0.10",
         "@tsconfig/node-lts": "24.0.0",
-        "@tsconfig/node-ts": "23.6.3",
+        "@tsconfig/node-ts": "23.6.4",
         "@tsconfig/recommended": "1.0.13",
         "@types/bun": "1.3.9",
         "@types/node": "25.2.3",
@@ -294,7 +294,7 @@
 
     "@tsconfig/node-lts": ["@tsconfig/node-lts@24.0.0", "", {}, "sha512-8mSTqWwCd6aQpvxSrpQlMoA9RiUZSs7bYhL5qsLXIIaN9HQaINeoydrRu/Y7/fws4bvfuyhs0BRnW9/NI8tySg=="],
 
-    "@tsconfig/node-ts": ["@tsconfig/node-ts@23.6.3", "", {}, "sha512-ZnYCOAKQwB90EFAbg8+i7J6UTw3QHuqUO5kYQeiYTs2ALUDL/ujJjR+Jk2FPwpQjKCzWkt+iIisd6+8pndBnzQ=="],
+    "@tsconfig/node-ts": ["@tsconfig/node-ts@23.6.4", "", {}, "sha512-37BMJvNQZ+vTgd1xG2TGBkJ6ENeT4eO4Wh2CHrnn0IwH7ybLFCzh4Uc//kc7UIvqiRac4uGdIc1meKOjMSlKzw=="],
 
     "@tsconfig/recommended": ["@tsconfig/recommended@1.0.13", "", {}, "sha512-sySRuBfMKyKO/j2ZAhR8kSembhjuPEV4Ra3AHtmWLq51+iGaudr45crPSzNC5b7/Ctrh9dfUpBuTlYrH6rM58Q=="],
 
