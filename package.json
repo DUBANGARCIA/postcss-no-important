@@ -57,7 +57,7 @@
     "conventional-changelog-conventionalcommits": "9.1.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.0",
+    "@biomejs/biome": "2.4.1",
     "@commitlint/cli": "20.4.1",
     "@commitlint/config-conventional": "20.4.1",
     "@release-it/bumper": "7.0.5",
