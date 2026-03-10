@@ -54,7 +54,7 @@
   },
   "overrides": {
     "@conventional-changelog/git-client": "2.6.0",
-    "conventional-changelog-conventionalcommits": "9.1.0"
+    "conventional-changelog-conventionalcommits": "9.3.0"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.6",
