@@ -35,7 +35,7 @@
   },
   "overrides": {
     "@conventional-changelog/git-client": "2.6.0",
-    "conventional-changelog-conventionalcommits": "9.3.0",
+    "conventional-changelog-conventionalcommits": "9.3.1",
   },
   "packages": {
     "@babel/code-frame": ["@babel/code-frame@7.27.1", "", { "dependencies": { "@babel/helper-validator-identifier": "^7.27.1", "js-tokens": "^4.0.0", "picocolors": "^1.1.1" } }, "sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg=="],
@@ -422,7 +422,7 @@
 
     "conventional-changelog-angular": ["conventional-changelog-angular@8.3.0", "", { "dependencies": { "compare-func": "^2.0.0" } }, "sha512-DOuBwYSqWzfwuRByY9O4oOIvDlkUCTDzfbOgcSbkY+imXXj+4tmrEFao3K+FxemClYfYnZzsvudbwrhje9VHDA=="],
 
-    "conventional-changelog-conventionalcommits": ["conventional-changelog-conventionalcommits@9.3.0", "", { "dependencies": { "compare-func": "^2.0.0" } }, "sha512-kYFx6gAyjSIMwNtASkI3ZE99U1fuVDJr0yTYgVy+I2QG46zNZfl2her+0+eoviG82c5WQvW1jMt1eOQTeJLodA=="],
+    "conventional-changelog-conventionalcommits": ["conventional-changelog-conventionalcommits@9.3.1", "", { "dependencies": { "compare-func": "^2.0.0" } }, "sha512-dTYtpIacRpcZgrvBYvBfArMmK2xvIpv2TaxM0/ZI5CBtNUzvF2x0t15HsbRABWprS6UPmvj+PzHVjSx4qAVKyw=="],
 
     "conventional-changelog-preset-loader": ["conventional-changelog-preset-loader@5.0.0", "", {}, "sha512-SetDSntXLk8Jh1NOAl1Gu5uLiCNSYenB5tm0YVeZKePRIgDW9lQImromTwLa3c/Gae298tsgOM+/CYT9XAl0NA=="],
 
