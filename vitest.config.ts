@@ -30,10 +30,4 @@ export default defineConfig({
       },
     },
   },
-  esbuild: {
-    target: 'node20',
-    supported: {
-      'top-level-await': true,
-    },
-  },
 });

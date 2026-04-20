@@ -4,6 +4,9 @@ import { matchesPattern, normalizeToSet } from './utils';
 
 const PLUGIN_NAME = 'postcss-no-important' as const;
 
+/**
+ * PostCSS plugin to remove `!important` from CSS declarations.
+ */
 const plugin: PluginCreator<PostCSSNoImportantOptions> = (options = {}) => {
   const {
     removeAll = true,
@@ -90,21 +93,18 @@ const plugin: PluginCreator<PostCSSNoImportantOptions> = (options = {}) => {
         }
       }
 
-      {
-        const statsPayload: { total: number; processingTime?: number } = { total: stats.total };
-        if (stats.processingTime !== undefined) {
-          statsPayload.processingTime = stats.processingTime;
-        }
-        const statsMessage: Message & {
-          type: 'statistics';
-          stats: { total: number; processingTime?: number };
-        } = {
-          type: 'statistics',
-          plugin: PLUGIN_NAME,
-          stats: statsPayload,
-        };
-        result.messages.push(statsMessage);
-      }
+      const statsMessage: Message & {
+        type: 'statistics';
+        stats: { total: number; processingTime?: number };
+      } = {
+        type: 'statistics',
+        plugin: PLUGIN_NAME,
+        stats: {
+          total: stats.total,
+          ...(stats.processingTime !== undefined && { processingTime: stats.processingTime }),
+        },
+      };
+      result.messages.push(statsMessage);
     },
   };
 };

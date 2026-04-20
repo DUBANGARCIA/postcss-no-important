@@ -6,8 +6,10 @@
     "@tsconfig/bun/tsconfig.json"
   ],
   "compilerOptions": {
-    "target": "ES2022",
+    "target": "ES2025",
     "module": "ESNext",
+    "lib": ["ES2025"],
+    "types": ["node", "bun-types"],
 
     "strict": true,
     "noImplicitReturns": true,
@@ -15,6 +17,7 @@
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
     "forceConsistentCasingInFileNames": true,
+    "noUncheckedSideEffectImports": true,
 
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,

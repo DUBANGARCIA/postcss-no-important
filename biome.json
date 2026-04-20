@@ -24,8 +24,13 @@
     "globals": ["__dirname", "__filename", "exports", "module", "require"]
   },
   "files": {
-    "includes": ["**/*.{js,cjs,mjs,ts,cts,mts,json}"],
-    "experimentalScannerIgnores": ["dist/**", "coverage/**", "node_modules/**", "test/fixtures/**"]
+    "includes": [
+      "**/*.{js,cjs,mjs,ts,cts,mts,json}",
+      "!!**/dist",
+      "!!**/coverage",
+      "!!**/node_modules",
+      "!!**/test/fixtures"
+    ]
   },
   "linter": {
     "enabled": true,
@@ -122,8 +127,6 @@
               "history": "TODO: Add a custom message here.",
               "innerHeight": "TODO: Add a custom message here.",
               "innerWidth": "TODO: Add a custom message here.",
-              "isFinite": "TODO: Add a custom message here.",
-              "isNaN": "TODO: Add a custom message here.",
               "length": "TODO: Add a custom message here.",
               "location": "TODO: Add a custom message here.",
               "locationbar": "TODO: Add a custom message here.",
