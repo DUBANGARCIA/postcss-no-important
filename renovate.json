@@ -32,7 +32,7 @@
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "oven-sh/bun",
       "extractVersionTemplate": "^bun-v(?<version>.*)$",
-      "managerFilePatterns": ["/build\\.yml$/", "/test\\.yml$/"],
+      "managerFilePatterns": ["/build\\.yaml$/", "/test\\.yaml$/"],
       "matchStrings": ["bun-version:\\s*(?<currentValue>[\\d\\.]+)"],
       "versioningTemplate": "semver"
     }
