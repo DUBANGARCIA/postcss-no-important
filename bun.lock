@@ -20,7 +20,7 @@
         "@vitest/coverage-v8": "4.1.5",
         "clean-publish": "6.0.5",
         "cz-git": "1.13.0",
-        "czg": "1.12.0",
+        "czg": "1.13.0",
         "is-ci": "4.1.0",
         "release-it": "20.0.1",
         "sort-package-json": "3.6.1",
@@ -486,7 +486,7 @@
 
     "cz-git": ["cz-git@1.13.0", "", {}, "sha512-oTxNSypCvhfHJF7KmnO8lSDup4lYa/s6bbF1700vyONepDIMTcMMXQweSxE/7ANIm7hcv1ckz4HLitZNM02fCw=="],
 
-    "czg": ["czg@1.12.0", "", { "bin": { "czg": "bin/index.js", "git-czg": "bin/index.js" } }, "sha512-LGltcoZ5m7vhe3WNw16QXqd5WurnHegx9V15MwZJtFAU2AVCYLCqDbwxPUgZOnAcdzzooq33ONcU148HOQsjdA=="],
+    "czg": ["czg@1.13.0", "", { "bin": { "czg": "bin/index.js", "git-czg": "bin/index.js" } }, "sha512-Y2f2gBpnCa3wJbBGic0mfNJt9zGbWKtrBlJFMclDNUyipvCgn0As2WPHaAtBkBSMlZgzORHRfwAP96C5lrCIYA=="],
 
     "data-uri-to-buffer": ["data-uri-to-buffer@7.0.0", "", {}, "sha512-CuRUx0TXGSbbWdEci3VK/XOZGP3n0P4pIKpsqpVtBqaIIuj3GKK8H45oAqA4Rg8FHipc+CzRdUzmD4YQXxv66Q=="],
 
