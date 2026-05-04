@@ -1,7 +1,7 @@
 [tools]
   "aqua:evilmartians/lefthook" = "2.1.6"
   "aqua:koalaman/shellcheck"   = "0.11.0"
-  "aqua:nektos/act"            = "0.2.87"
+  "aqua:nektos/act"            = "0.2.88"
   "aqua:rhysd/actionlint"      = "1.7.12"
   bun                          = '1.3.13'
   node                         = "24.15.0"
