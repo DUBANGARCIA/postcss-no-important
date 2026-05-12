@@ -19,7 +19,7 @@
         "@types/node": "25.6.2",
         "@vitest/coverage-v8": "4.1.5",
         "clean-publish": "6.0.5",
-        "cz-git": "1.13.0",
+        "cz-git": "1.13.1",
         "czg": "1.13.0",
         "is-ci": "4.1.0",
         "release-it": "20.0.1",
@@ -484,7 +484,7 @@
 
     "css-what": ["css-what@6.2.2", "", {}, "sha512-u/O3vwbptzhMs3L1fQE82ZSLHQQfto5gyZzwteVIEyeaY5Fc7R4dapF/BvRoSYFeqfBk4m0V1Vafq5Pjv25wvA=="],
 
-    "cz-git": ["cz-git@1.13.0", "", {}, "sha512-oTxNSypCvhfHJF7KmnO8lSDup4lYa/s6bbF1700vyONepDIMTcMMXQweSxE/7ANIm7hcv1ckz4HLitZNM02fCw=="],
+    "cz-git": ["cz-git@1.13.1", "", {}, "sha512-xeMA5ci+gkBY6uKmqc6nzhG/Q4pmK1DKbVVUgByOTBgregoiYE0f3otEF0ADelyEWH4vNsO1W2o7QZYEe7Nwlw=="],
 
     "czg": ["czg@1.13.0", "", { "bin": { "czg": "bin/index.js", "git-czg": "bin/index.js" } }, "sha512-Y2f2gBpnCa3wJbBGic0mfNJt9zGbWKtrBlJFMclDNUyipvCgn0As2WPHaAtBkBSMlZgzORHRfwAP96C5lrCIYA=="],
 
