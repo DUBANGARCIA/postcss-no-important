@@ -67,7 +67,7 @@
     "@types/node": "25.6.2",
     "@vitest/coverage-v8": "4.1.5",
     "clean-publish": "6.0.5",
-    "cz-git": "1.13.0",
+    "cz-git": "1.13.1",
     "czg": "1.13.0",
     "is-ci": "4.1.0",
     "release-it": "20.0.1",
