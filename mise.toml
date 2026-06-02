@@ -1,5 +1,5 @@
 [tools]
-  "aqua:evilmartians/lefthook" = "2.1.8"
+  "aqua:evilmartians/lefthook" = "2.1.9"
   "aqua:koalaman/shellcheck"   = "0.11.0"
   "aqua:nektos/act"            = "0.2.88"
   "aqua:rhysd/actionlint"      = "1.7.12"
