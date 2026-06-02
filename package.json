@@ -70,7 +70,7 @@
     "cz-git": "1.13.1",
     "czg": "1.13.1",
     "is-ci": "4.1.0",
-    "release-it": "20.0.1",
+    "release-it": "20.2.0",
     "sort-package-json": "3.6.1",
     "tsup": "8.5.1",
     "typescript": "6.0.3",
