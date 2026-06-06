@@ -38,7 +38,7 @@ commit-msg:
     - run: eval "$(mise env)"
   commands:
     commitlint:
-      run: bun --bun commitlint --config commitlint.config.js --edit "$1"
+      run: bun --bun commitlint --config commitlint.config.cjs --edit "$1"
 
 post-checkout, post-merge, post-rewrite:
   parallel: false
