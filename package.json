@@ -54,8 +54,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.16",
-    "@commitlint/cli": "20.5.3",
-    "@commitlint/config-conventional": "20.5.3",
+    "@commitlint/cli": "21.0.2",
+    "@commitlint/config-conventional": "21.0.2",
     "@release-it/bumper": "7.0.6",
     "@release-it/conventional-changelog": "10.0.6",
     "@taplo/cli": "0.7.0",
