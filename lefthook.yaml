@@ -8,22 +8,22 @@ pre-commit:
     format:
       priority: 1
       glob: '*'
-      run: bun --bun biome format --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+      run: mise exec -- bun --bun biome format --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
       stage_fixed: true
     lint:
       priority: 2
       glob: '*'
-      run: bun --bun biome lint --write --unsafe --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+      run: mise exec -- bun --bun biome lint --write --unsafe --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
       stage_fixed: true
     sort-package-json:
       priority: 3
       glob: '**/package.json'
-      run: bun sort-package-json {staged_files}
+      run: mise exec -- bun sort-package-json {staged_files}
       stage_fixed: true
     toml:
       priority: 4
       glob: '*.toml'
-      run: bun --bun taplo fmt {staged_files}
+      run: mise exec -- bun --bun taplo fmt {staged_files}
       stage_fixed: true
     actionlint:
       priority: 2
@@ -38,7 +38,7 @@ commit-msg:
     - run: eval "$(mise env)"
   commands:
     commitlint:
-      run: bun --bun commitlint --config commitlint.config.js --edit "$1"
+      run: mise exec -- bun --bun commitlint --config commitlint.config.js --edit "$1"
 
 post-checkout, post-merge, post-rewrite:
   parallel: false
@@ -49,6 +49,6 @@ post-checkout, post-merge, post-rewrite:
   commands:
     bun-install:
       glob: "{package.json,bun.lock,bunfig.toml}"
-      run: bun install --frozen-lockfile
+      run: mise exec -- bun install --frozen-lockfile
       only:
         - changed
