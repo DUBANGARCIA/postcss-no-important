@@ -3,7 +3,6 @@ pre-commit:
   jobs:
     - run: mise trust
     - run: mise install --yes
-    - run: eval "$(mise env)"
   commands:
     format:
       priority: 1
@@ -35,7 +34,6 @@ commit-msg:
   jobs:
     - run: mise trust
     - run: mise install --yes
-    - run: eval "$(mise env)"
   commands:
     commitlint:
       run: mise exec -- bun --bun commitlint --config commitlint.config.js --edit "$1"
@@ -45,7 +43,6 @@ post-checkout, post-merge, post-rewrite:
   jobs:
     - run: mise trust
     - run: mise install --yes
-    - run: eval "$(mise env)"
   commands:
     bun-install:
       glob: "{package.json,bun.lock,bunfig.toml}"
