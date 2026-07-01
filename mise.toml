@@ -1,4 +1,5 @@
 [tools]
+  "aqua:aquasecurity/trivy"    = "0.71.1"
   "aqua:evilmartians/lefthook" = "2.1.9"
   "aqua:koalaman/shellcheck"   = "0.11.0"
   "aqua:nektos/act"            = "0.2.89"
