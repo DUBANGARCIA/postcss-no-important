@@ -2,36 +2,32 @@
 
 # [11.0.0](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.2.1...11.0.0) (2025-09-04)
 
-
 ### Features
 
-* **plugin:** ✨ configurations were added to the plug-in to make it more versatile ([ff29b0a](https://github.com/DUBANGARCIA/postcss-no-important/commit/ff29b0aa0a0a59ee722693e1232dd655221b0b7d))
-
+- **plugin:** ✨ configurations were added to the plug-in to make it more versatile ([ff29b0a](https://github.com/DUBANGARCIA/postcss-no-important/commit/ff29b0aa0a0a59ee722693e1232dd655221b0b7d))
 
 ### BREAKING CHANGES
 
-* **plugin:** Migrate the project to TypeScript using vitest as the testing runner.
+- **plugin:** Migrate the project to TypeScript using vitest as the testing runner.
 
 ## [10.2.1](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.2.0...10.2.1) (2025-06-04)
 
 # [10.2.0](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.1.0...10.2.0) (2025-06-02)
 
-
 ### Features
 
-* **workspace:** 🎸 migrate from pnpm to bun as package manager ([aadde56](https://github.com/DUBANGARCIA/postcss-no-important/commit/aadde564408231a218f2875c34b148f1706aacbd))
+- **workspace:** 🎸 migrate from pnpm to bun as package manager ([aadde56](https://github.com/DUBANGARCIA/postcss-no-important/commit/aadde564408231a218f2875c34b148f1706aacbd))
 
 # [10.1.0](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.0.7...10.1.0) (2024-08-16)
 
-
 ### Features
 
-* **plugin:** 🎸 migrate the use of eslint, prettier, pnpm and nvm tools to tools currently in use ([20608cf](https://github.com/DUBANGARCIA/postcss-no-important/commit/20608cfd01c34634cf2015aa18f2c41e9cd493b8))
-* **workspace:** 🎸 add a validation in renovate to automatically mix pin type changes ([fee0246](https://github.com/DUBANGARCIA/postcss-no-important/commit/fee02462cb2433b4cc239763661a101feed445d7))
-* **workspace:** 🎸 change the format of the renovate bot configuration for the renovate app ([2aa2c30](https://github.com/DUBANGARCIA/postcss-no-important/commit/2aa2c3055799aadffe6bb86058fe360e4546beb4))
-* **workspace:** 🎸 migrate to the use of the renovate bot tool instead of dependabot ([20bd4fe](https://github.com/DUBANGARCIA/postcss-no-important/commit/20bd4fefe0aeceb79b6418d81285c12381950660))
-* **workspace:** 🎸 update project dependencies ([6129574](https://github.com/DUBANGARCIA/postcss-no-important/commit/61295740f23a1a300fed4c859b9f037491e56649))
-* **workspace:** 🎸 update the renovate configuration to auto-mix packages with stable releases ([ca2ca8d](https://github.com/DUBANGARCIA/postcss-no-important/commit/ca2ca8d27d4df5e303b3e651fe364e1c2db156b7))
+- **plugin:** 🎸 migrate the use of eslint, prettier, pnpm and nvm tools to tools currently in use ([20608cf](https://github.com/DUBANGARCIA/postcss-no-important/commit/20608cfd01c34634cf2015aa18f2c41e9cd493b8))
+- **workspace:** 🎸 add a validation in renovate to automatically mix pin type changes ([fee0246](https://github.com/DUBANGARCIA/postcss-no-important/commit/fee02462cb2433b4cc239763661a101feed445d7))
+- **workspace:** 🎸 change the format of the renovate bot configuration for the renovate app ([2aa2c30](https://github.com/DUBANGARCIA/postcss-no-important/commit/2aa2c3055799aadffe6bb86058fe360e4546beb4))
+- **workspace:** 🎸 migrate to the use of the renovate bot tool instead of dependabot ([20bd4fe](https://github.com/DUBANGARCIA/postcss-no-important/commit/20bd4fefe0aeceb79b6418d81285c12381950660))
+- **workspace:** 🎸 update project dependencies ([6129574](https://github.com/DUBANGARCIA/postcss-no-important/commit/61295740f23a1a300fed4c859b9f037491e56649))
+- **workspace:** 🎸 update the renovate configuration to auto-mix packages with stable releases ([ca2ca8d](https://github.com/DUBANGARCIA/postcss-no-important/commit/ca2ca8d27d4df5e303b3e651fe364e1c2db156b7))
 
 ## [10.0.7](https://github.com/DUBANGARCIA/postcss-no-important/compare/10.0.6...10.0.7) (2023-05-07)
 

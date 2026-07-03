@@ -84,7 +84,7 @@ jobs:
             echo "📊 Coverage Report Generated"
             echo "Files in coverage/:"
             ls -la coverage/
-          
+
             if command -v lcov >/dev/null 2>&1; then
               lcov --summary coverage/lcov.info 2>/dev/null || echo "LCOV summary not available"
             fi
