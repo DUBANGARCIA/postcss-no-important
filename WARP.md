@@ -16,7 +16,7 @@ bun install --frozen-lockfile
 
 # Development & Testing
 bun test                    # Run tests once
-bun test:watch             # Run tests in watch mode  
+bun test:watch             # Run tests in watch mode
 bun test:coverage          # Run tests with coverage report
 bun run type-check         # TypeScript type checking
 
@@ -62,12 +62,14 @@ This is a PostCSS plugin built with TypeScript that removes `!important` declara
 
 **PostCSS Visitor Pattern**: The plugin uses PostCSS's visitor hooks (`Declaration`, `Once`, `OnceExit`) to process CSS AST nodes.
 
-**Performance Optimizations**: 
+**Performance Optimizations**:
+
 - Uses `Set` data structures for O(1) property lookups instead of arrays
 - Implements selector pattern matching with RegExp support
 - Tracks performance metrics in verbose mode
 
 **Statistics & Reporting**:
+
 - Collects removal statistics (total count, per-property, per-selector)
 - Optional verbose logging with performance timing
 - Inter-plugin communication via PostCSS messages
@@ -75,6 +77,7 @@ This is a PostCSS plugin built with TypeScript that removes `!important` declara
 ### Plugin Options Architecture
 
 The plugin supports flexible configuration:
+
 - `removeAll` (default: true) - Remove all or target specific properties
 - `properties/exclude` - Arrays or Sets for property filtering
 - `preserveSelectors` - Array of strings/RegExp patterns to preserve
@@ -83,26 +86,31 @@ The plugin supports flexible configuration:
 ## Testing Strategy
 
 **Test Organization**:
+
 - `test/plugin.test.ts` - Core functionality, options, edge cases, performance
 - `test/integration.test.ts` - Integration with other PostCSS plugins
 
-**Performance Testing**: 
+**Performance Testing**:
+
 - Tests process 10,000 CSS rules to ensure scalability
 - Validates O(1) Set-based property lookups
 - Includes timing assertions for CI reliability
 
 **Coverage Requirements**:
+
 - Branches: 90%+, Functions: 95%+, Lines: 95%+, Statements: 95%+
 
 ## Build & Release Process
 
 **Build Configuration** (`tsup.config.ts`):
+
 - Dual output: ESM (`.mjs`) and CommonJS (`.cjs`)
 - TypeScript declaration files generated for ESM only
 - External PostCSS dependency, Node.js 20+ target
 - Tree-shaking and minification enabled
 
 **Automated Release Flow**:
+
 1. Pre-release: Type checking → Build → Clean publish preparation
 2. Conventional changelog generation from commit messages
 3. GitHub release creation with automated release notes
@@ -114,17 +122,20 @@ The plugin supports flexible configuration:
 ## Code Quality Standards
 
 **Biome Configuration**: Comprehensive linting rules with 100+ enabled rules covering:
+
 - Complexity reduction (no-forEach, use arrow functions)
-- Correctness (proper TypeScript usage)  
+- Correctness (proper TypeScript usage)
 - Performance (no accumulating spreads, avoid barrel files)
 - Security (prevent dangerous patterns)
 
 **TypeScript Configuration**: Strict mode enabled with additional strict options:
+
 - `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`
 - Node.js LTS + Bun-specific type configurations
 - Declaration maps and source maps for debugging
 
 **Git Hooks** (lefthook):
+
 - Pre-commit: Format → Lint → Sort package.json → Format TOML
 - Commit-msg: Commitlint validation
 - Post-checkout/merge: Dependency installation
@@ -145,29 +156,34 @@ The plugin is designed for high performance with large CSS files and provides ex
 ## Debugging & Troubleshooting
 
 ### Verbose Mode
+
 ```bash
 # Enable detailed logging with performance metrics
 bun vitest test/plugin.test.ts --verbose
 ```
 
 Plugin usage with verbose mode:
+
 ```js
-postcss([plugin({ verbose: true, reportChanges: true })])
+postcss([plugin({ verbose: true, reportChanges: true })]);
 ```
 
 ### Common Issues
 
-**Performance Issues**: 
+**Performance Issues**:
+
 - Use `Set` instead of arrays for `properties`/`exclude` options
 - Enable verbose mode to identify bottlenecks
 - Consider using `preserveSelectors` instead of complex exclude logic
 
 **Testing Issues**:
+
 - Tests expect Bun runtime - don't run with Node.js
 - Coverage thresholds are strict (90%+ branches, 95%+ functions/lines/statements)
 - Performance tests may be flaky on slow CI - timing thresholds are generous
 
 **Build Issues**:
+
 - Ensure `bun --bun` prefix for build commands
 - TypeScript declarations only generated for ESM build
 - Clean publish requires `./dist` directory structure

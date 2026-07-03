@@ -37,6 +37,7 @@ bun add --dev postcss postcss-no-important
 ```
 
 ## 🚀 Usage
+
 ### Basic Usage
 
 ```js
@@ -44,13 +45,14 @@ const postcss = require('postcss');
 const noImportant = require('postcss-no-important');
 
 postcss([noImportant()])
-.process(css, { from: 'input.css' })
-.then(result => {
-console.log(result.css);
-});
+  .process(css, { from: 'input.css' })
+  .then((result) => {
+    console.log(result.css);
+  });
 ```
 
 **Input:**
+
 ```css
 .foo {
   background-color: #ccc !important;
@@ -78,15 +80,16 @@ console.log(result.css);
 ```
 
 ### Advanced Configuration
+
 #### Target Specific Properties
 
 ```js
 postcss([
   noImportant({
     removeAll: false,
-    properties: ['color', 'background-color'] // Only remove from these properties
-  })
-])
+    properties: ['color', 'background-color'], // Only remove from these properties
+  }),
+]);
 ```
 
 #### Exclude Specific Properties
@@ -95,9 +98,9 @@ postcss([
 postcss([
   noImportant({
     removeAll: true,
-    exclude: ['z-index', 'position'] // Remove from all except these
-  })
-])
+    exclude: ['z-index', 'position'], // Remove from all except these
+  }),
+]);
 ```
 
 #### Preserve Selectors with Pattern Matching
@@ -108,10 +111,10 @@ postcss([
     preserveSelectors: [
       '.utility-', // String matching
       /^\.u-/, // RegExp support
-      /hover|focus|active/ // Complex patterns
-    ]
-  })
-])
+      /hover|focus|active/, // Complex patterns
+    ],
+  }),
+]);
 ```
 
 #### Performance Optimized with Sets
@@ -120,9 +123,9 @@ postcss([
 postcss([
   noImportant({
     properties: new Set(['margin', 'padding']), // O(1) lookup performance
-    exclude: new Set(['font-weight', 'z-index'])
-  })
-])
+    exclude: new Set(['font-weight', 'z-index']),
+  }),
+]);
 ```
 
 #### Verbose Logging and Statistics
@@ -131,9 +134,9 @@ postcss([
 postcss([
   noImportant({
     verbose: true, // Enable detailed logging
-    reportChanges: true // Emit messages for other plugins
-  })
-])
+    reportChanges: true, // Emit messages for other plugins
+  }),
+]);
 ```
 
 **Console Output:**
@@ -151,17 +154,17 @@ padding: 3
 
 ## 🎛️ Configuration Options
 
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `removeAll` | `boolean` | `true` | Remove from all declarations `!important` |
-| `properties` | `string[] | Set<string>` | `[]` | Target specific properties (when ) `removeAll: false` |
-| `exclude` | `string[] | Set<string>` | `[]` | Exclude specific properties (when `removeAll: true`) |
-| `preserveSelectors` | `(string | RegExp)[]` | `[]` | Preserve on matching selectors `!important` |
-| `verbose` | `boolean` | `false` | Enable detailed logging with performance metrics |
-| `reportChanges` | `boolean` | `false` | Emit PostCSS messages for plugin integration |
-
+| Option              | Type      | Default      | Description                                      |
+| ------------------- | --------- | ------------ | ------------------------------------------------ | ----------------------------------------------------- |
+| `removeAll`         | `boolean` | `true`       | Remove from all declarations `!important`        |
+| `properties`        | `string[] | Set<string>` | `[]`                                             | Target specific properties (when ) `removeAll: false` |
+| `exclude`           | `string[] | Set<string>` | `[]`                                             | Exclude specific properties (when `removeAll: true`)  |
+| `preserveSelectors` | `(string  | RegExp)[]`   | `[]`                                             | Preserve on matching selectors `!important`           |
+| `verbose`           | `boolean` | `false`      | Enable detailed logging with performance metrics |
+| `reportChanges`     | `boolean` | `false`      | Emit PostCSS messages for plugin integration     |
 
 ### TypeScript Support
+
 Full TypeScript definitions are included:
 
 ```ts
@@ -172,14 +175,14 @@ const options: PostCSSNoImportantOptions = {
   removeAll: false,
   properties: new Set(['color', 'background-color']),
   preserveSelectors: [/^\.utility-/],
-  verbose: true
+  verbose: true,
 };
 
-const result = await postcss([noImportant(options)])
-  .process(css, { from: 'input.css' });
+const result = await postcss([noImportant(options)]).process(css, { from: 'input.css' });
 ```
 
 ## 🏗️ Integration Examples
+
 ### With Other PostCSS Plugins
 
 ```js
@@ -189,14 +192,14 @@ const noImportant = require('postcss-no-important');
 
 postcss([
   noImportant({ reportChanges: true }), // Run before other plugins
-  autoprefixer()
+  autoprefixer(),
 ])
-.process(css)
-.then(result => {
-  // Access removal statistics
-  const stats = result.messages.find(msg => msg.type === 'statistics');
-  console.log(`Removed ${stats.stats.total} !important declarations`);
-});
+  .process(css)
+  .then((result) => {
+    // Access removal statistics
+    const stats = result.messages.find((msg) => msg.type === 'statistics');
+    console.log(`Removed ${stats.stats.total} !important declarations`);
+  });
 ```
 
 ### Webpack Configuration
@@ -215,18 +218,21 @@ module.exports = {
             options: {
               postcssOptions: {
                 plugins: [
-                  ['postcss-no-important', {
-                    preserveSelectors: ['.critical-', /^\.override-/],
-                    verbose: process.env.NODE_ENV === 'development'
-                  }]
-                ]
-              }
-            }
-          }
-        ]
-      }
-    ]
-  }
+                  [
+                    'postcss-no-important',
+                    {
+                      preserveSelectors: ['.critical-', /^\.override-/],
+                      verbose: process.env.NODE_ENV === 'development',
+                    },
+                  ],
+                ],
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
 };
 ```
 
@@ -242,23 +248,27 @@ export default defineConfig({
       plugins: [
         noImportant({
           exclude: ['z-index'],
-          verbose: true
-        })
-      ]
-    }
-  }
+          verbose: true,
+        }),
+      ],
+    },
+  },
 });
 ```
 
 ## 📊 Performance
+
 The plugin is optimized for large CSS files:
+
 - **Set-based lookups**: O(1) property matching instead of array scanning
 - **Visitor pattern**: Efficient AST traversal with PostCSS
 - **Memory efficient**: Minimal memory footprint during processing
 - **Benchmarked**: Tested with 10,000+ CSS rules for performance validation
 
 ## 🔧 Development
+
 The project uses modern development tools:
+
 - **Bun** as runtime and package manager
 - **TypeScript** for type safety
 - **Vitest** for testing with 90%+ coverage
@@ -283,24 +293,28 @@ bun run build:release
 ```
 
 ## 📈 Migration from v10.x
+
 The plugin has been completely rewritten in TypeScript with new features:
 
 ```js
 // v10.x (deprecated)
-postcss([noImportant()])
+postcss([noImportant()]);
 
 // v11.x (current) - same basic usage
-postcss([noImportant()])
+postcss([noImportant()]);
 
 // v11.x (new features)
-postcss([noImportant({
-  preserveSelectors: [/^\.utility-/], // NEW: RegExp support
-  verbose: true, // NEW: Performance metrics
-  properties: new Set(['color']) // NEW: Set optimization
-})])
+postcss([
+  noImportant({
+    preserveSelectors: [/^\.utility-/], // NEW: RegExp support
+    verbose: true, // NEW: Performance metrics
+    properties: new Set(['color']), // NEW: Set optimization
+  }),
+]);
 ```
 
 ## 🤝 Contributing
+
 Contributions are welcome! Please read our contributing guidelines and ensure all tests pass:
 
 ```bash
@@ -316,9 +330,11 @@ bun run commit
 ```
 
 ## 📄 License
+
 [MIT](LICENSE) © [Duban Garcia](https://github.com/DUBANGARCIA)
+
 ## 🙏 Acknowledgments
+
 - Built with [PostCSS](https://postcss.org/)
 - Inspired by the CSS community's need for better management `!important`
 - Thanks to all contributors and users for feedback and improvements
-

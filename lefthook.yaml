@@ -5,15 +5,15 @@ pre-commit:
     - run: mise install --yes
     - run: eval "$(mise env)"
   commands:
-    format:
+    prettier:
       priority: 1
-      glob: '*'
-      run: bun --bun biome format --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+      glob: '*.{js,cjs,mjs,ts,cts,mts,json,md,yaml,yml}'
+      run: bun --bun prettier --write --cache {staged_files}
       stage_fixed: true
-    lint:
+    eslint:
       priority: 2
-      glob: '*'
-      run: bun --bun biome lint --write --unsafe --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+      glob: '*.{js,cjs,mjs,ts,cts,mts}'
+      run: bun --bun eslint --config eslint.config.js --cache --fix {staged_files}
       stage_fixed: true
     sort-package-json:
       priority: 3
@@ -48,7 +48,7 @@ post-checkout, post-merge, post-rewrite:
     - run: eval "$(mise env)"
   commands:
     bun-install:
-      glob: "{package.json,bun.lock,bunfig.toml}"
+      glob: '{package.json,bun.lock,bunfig.toml}'
       run: bun install --frozen-lockfile
       only:
         - changed
