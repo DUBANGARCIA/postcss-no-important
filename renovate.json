@@ -37,7 +37,9 @@
       "versioningTemplate": "semver"
     }
   ],
-  "dependencyDashboard": true,
+  "dependencyDashboard": {
+    "enabled": true
+  },
   "extends": [
     ":rebaseStalePrs",
     ":automergeRequireAllStatusChecks",
