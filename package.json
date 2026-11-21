@@ -74,7 +74,7 @@
     "sort-package-json": "4.0.0",
     "tsup": "8.5.1",
     "typescript": "6.0.3",
-    "vitest": "4.1.8"
+    "vitest": "4.1.11"
   },
   "peerDependencies": {
     "postcss": "^8.4.0"
